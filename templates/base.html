@@ -16,6 +16,43 @@
 </head>
 
 <body>
+    <header>
+        <!-- main navbar -->
+        <nav class="nav-extended text-shadow red darken-2">
+            <div class="nav-wrapper">
+                <a href="home.html"><img class="brand-logo center logo" src="static/images/italian_inside.png"
+                        alt="Italian Inside"></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right draggable"><i
+                        class="fas fa-hamburger"></i></a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('get_recipes') }}">All Recipes</a></li>
+                    <li><a href="#">DePan</a></li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- mobile collapsible menu -->
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <h4 class="center-align"></h4>
+            </li>
+            <a href="home.html"><img class="brand-logo logo" src="static/images/italian_inside.png"
+                    alt="Italian Inside"></a>
+            <li><a href="{{ url_for('get_recipes') }}">All Recipes</a></li>
+            <li><a href="#">DePan</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </header>
 
     {% block content %}
     {% endblock %}

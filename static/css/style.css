@@ -1,0 +1,17 @@
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/*-- big screens --*/
+@media only screen and (min-width: 768px) {
+    .logo {
+        width: 150px;
+    }
+}
+
+/*-- smartphones and small screens --*/
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 100px;
+    }
+}
