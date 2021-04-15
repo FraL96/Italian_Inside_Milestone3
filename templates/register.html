@@ -3,20 +3,45 @@
 
 <h3 class="center-align">Register here!</h3>
 
+<!-- flash messages-->
+<section>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="div row flash">
+        <h4 class="red lighten-3 center-align">
+            {{ message }}
+        </h4>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+</section>
+
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
         <div class="row">
             <div class="input-field col s6 offset-m3">
                 <i class="fas fa-user-plus prefix red-text text-darken-2"></i>
-                <input id="username" name="username" type="text" class="validate" required>
+                <input id="username" name="username" type="text" minlength="3" maxlength="20"
+                    pattern="^[a-zA-Z0-9]{3,20}" class="validate" required>
                 <label for="username">Username</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6 offset-m3">
                 <i class="fas fa-user-lock prefix red-text text-darken-2"></i>
-                <input id="password" name="password" type="password" class="validate" required>
+                <input id="password" name="password" type="password" minlength="5" maxlength="20"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{5,20}$" class="validate" required>
                 <label for="password">Password</label>
+                <div class="info">
+                    <p>The password have to be between 5 and 20 characters and contain at least:</p>
+                    <ul>
+                        <li>- A digit</li>
+                        <li>- An uppercase and a lowercase letter</li>
+                        <li>- A special character</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <button type="submit" class="col s6 offset-m3 btn-large red darken-2 playfair">Register</button>
