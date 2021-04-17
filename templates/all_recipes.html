@@ -19,12 +19,12 @@
 
                 <div class="collapsible-body">
                     <span>{{ recipe.recipe_name }}</span>
-                    {% if recipe.type == "meat" %}
+                    {% if recipe.type == "Contains Meat" %}
                     <i class="fas fa-drumstick-bite tooltipped" data-position="right"
                         data-tooltip="Contains meat"></a></i>
-                    {% elif recipe.type == "fish" %}
+                    {% elif recipe.type == "Contains Fish" %}
                     <i class="fas fa-fish tooltipped" data-position="right" data-tooltip="Contains fish"></i>
-                    {% elif recipe.type == "veg" %}
+                    {% elif recipe.type == "Vegetarian" %}
                     <i class="fas fa-leaf tooltipped" data-position="right" data-tooltip="Vegetarian"></i>
                     {% endif %}
                 </div>

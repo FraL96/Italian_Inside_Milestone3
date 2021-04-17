@@ -95,7 +95,11 @@ def logout():
 @app.route("/add_recipe")
 def add_recipe():
     regions = mongo.db.regions.find().sort("region_name", 1)
-    return render_template("add_recipe.html", regions=regions)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    options = mongo.db.options.find().sort("option_name", 1)
+    difficulty = mongo.db.difficulty.find().sort("difficulty_level", 1)
+    return render_template("add_recipe.html", regions=regions,
+                           categories=categories, options=options, difficulty=difficulty)
 
 
 if __name__ == "__main__":

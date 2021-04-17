@@ -34,47 +34,52 @@
         <!--Category-->
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
-                <select>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
+                <i class="fas fa-pizza-slice prefix red-text text-darken-1"></i>
+                <select id="category" name="category" class="validate" required>
+                    <option value="" disabled selected>Category</option>
+                    {% for category in categories %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
                 </select>
-                <label>Materialize Select</label>
+                <label for="region">Select a category</label>
             </div>
         </div>
 
         <!--Type-->
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
-                <select>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
+                <i class="fas fa-exclamation prefix red-text text-darken-1"></i>
+                <select id="option" name="option" class="validate" required>
+                    <option value="" disabled selected>Type</option>
+                    {% for option in options %}
+                    <option value="{{ option.option_name }}">{{ option.option_name }}</option>
+                    {% endfor %}
                 </select>
-                <label>Materialize Select</label>
+                <label for="region">Select one option</label>
             </div>
         </div>
 
         <!--Difficulty-->
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
-                <select>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
+                <i class="fas fa-dumbbell prefix red-text text-darken-1"></i>
+                <select id="difficulty" name="difficulty" class="validate" required>
+                    <option value="" disabled selected>Difficulty</option>
+                    {% for difficulty in difficulty %}
+                    <option value="{{ difficulty.difficulty_level }}">{{ difficulty.difficulty_level }}</option>
+                    {% endfor %}
                 </select>
-                <label>Materialize Select</label>
+                <label for="region">Select a difficulty level</label>
             </div>
         </div>
 
         <!--Quantity-->
-        <div class="row">
+        <div class="row col s12 m10 offset-m1">
+            <i class="fas fa-people-arrows prefix red-text text-darken-1"></i>
             <form action="#">
                 <p class="range-field">
-                    <input type="range" id="test5" min="0" max="100" />
+                    <label for="quantity">For how many people</label>
+                    <input id="quantity" name="quantity" type="range" min="1" max="10" />
                 </p>
             </form>
         </div>
