@@ -3,32 +3,38 @@
 
 <h3 class="center-align">Find the recipe for you!</h3>
 
-<ul class="collapsible">
-    <li>
-        {% for category in categories %}
-        <div class="collapsible-header white-text red darken-4 text-shadow">
-            <i class="fas fa-caret-down"></i>
-            <strong>{{ category.category_name }}</strong>
-        </div>
+<div class="row recipes">
+    <div class="col s12 m6 offset-m3">
 
-        {% for recipe in recipes %}
-        {% if recipe.category == category.category_name %}
+        <ul class="collapsible">
+            <li>
+                {% for category in categories %}
+                <div class="collapsible-header white-text red darken-4 text-shadow">
+                    <i class="fas fa-caret-down"></i>
+                    <strong>{{ category.category_name }}</strong>
+                </div>
 
-        <div class="collapsible-body">
-            {{ recipe.recipe_name }}
-            {% if recipe.type == "meat" %}
-            <i class="fas fa-drumstick-bite tooltipped" data-position="right" data-tooltip="Contains meat"></a></i>
-            {% elif recipe.type == "fish" %}
-            <i class="fas fa-fish tooltipped" data-position="right" data-tooltip="Contains fish"></i>
-            {% elif recipe.type == "veg" %}
-            <i class="fas fa-leaf tooltipped" data-position="right" data-tooltip="Vegetarian"></i>
-            {% endif %}
-        </div>
-        {% endif %}
-        {% endfor %}
-        {% endfor %}
-    </li>
+                {% for recipe in recipes %}
+                {% if recipe.category == category.category_name %}
 
-</ul>
+                <div class="collapsible-body">
+                    <span>{{ recipe.recipe_name }}</span>
+                    {% if recipe.type == "meat" %}
+                    <i class="fas fa-drumstick-bite tooltipped" data-position="right"
+                        data-tooltip="Contains meat"></a></i>
+                    {% elif recipe.type == "fish" %}
+                    <i class="fas fa-fish tooltipped" data-position="right" data-tooltip="Contains fish"></i>
+                    {% elif recipe.type == "veg" %}
+                    <i class="fas fa-leaf tooltipped" data-position="right" data-tooltip="Vegetarian"></i>
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+            </li>
+
+        </ul>
+    </div>
+</div>
 
 {% endblock %}

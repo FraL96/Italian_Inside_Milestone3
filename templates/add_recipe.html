@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align">Add a new recipe!</h3>
+
+
+<div class="row">
+    <form class="col s12" method="POST" action="">
+
+        <!--Recipe name-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-utensils prefix red-text text-darken-1"></i>
+                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="50" type="text" class="validate"
+                    required>
+                <label for="recipe_name">Recipe Name</label>
+            </div>
+        </div>
+
+        <!--Region-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-map-signs prefix red-text text-darken-1"></i>
+                <select id="region" name="region" class="validate" required>
+                    <option value="" disabled selected>Region</option>
+                    {% for region in regions %}
+                    <option value="{{ region.region_name }}">{{ region.region_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="region">Select a region</label>
+            </div>
+        </div>
+
+        <!--Category-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Materialize Select</label>
+            </div>
+        </div>
+
+        <!--Type-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Materialize Select</label>
+            </div>
+        </div>
+
+        <!--Difficulty-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Materialize Select</label>
+            </div>
+        </div>
+
+        <!--Quantity-->
+        <div class="row">
+            <form action="#">
+                <p class="range-field">
+                    <input type="range" id="test5" min="0" max="100" />
+                </p>
+            </form>
+        </div>
+
+        <!--Ingredients-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-list prefix red-text text-darken-1"></i>
+                <input id="ingredients" name="ingredients" minlength="5" maxlength="200" type="text" class="validate"
+                    required>
+                <label for="ingredients">Ingredients</label>
+            </div>
+        </div>
+
+        <!--Step 1-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_1" name="step_1" minlength="5" maxlength="500" type="text" class="validate" required>
+                <label for="step_1">Step 1</label>
+            </div>
+        </div>
+
+        <!--Step 2-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_2" name="step_2" minlength="5" maxlength="500" type="text" class="validate">
+                <label for="step_2">Step 2</label>
+            </div>
+        </div>
+
+        <!--Step 3-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_3" name="step_3" minlength="5" maxlength="500" type="text" class="validate">
+                <label for="step_3">Step 3</label>
+            </div>
+        </div>
+
+        <!--Step 4-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_4" name="step_4" minlength="5" maxlength="500" type="text" class="validate">
+                <label for="step_4">Step 4</label>
+            </div>
+        </div>
+
+        <!--Step 5-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_5" name="step_5" minlength="5" maxlength="500" type="text" class="validate">
+                <label for="step_5">Step 5</label>
+            </div>
+        </div>
+
+        <!--Step 6-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_6" name="step_6" minlength="5" maxlength="500" type="text" class="validate">
+                <label for="step_6">Step 6</label>
+            </div>
+        </div>
+
+        <!--Step 7-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_7" name="step_7" minlength="5" maxlength="500" type="text" class="validate">
+                <label for="step_7">Step 7</label>
+            </div>
+        </div>
+
+        <!--Step 8-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_8" name="step_8" minlength="5" maxlength="500" type="text" class="validate">
+                <label for="step_8">Step 8</label>
+            </div>
+        </div>
+
+        <!--Step 9-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_9" name="step_9" minlength="5" maxlength="500" type="text" class="validate">
+                <label for="step_9">Step 9</label>
+            </div>
+        </div>
+
+        <!--Step 10-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
+                <input id="step_10" name="step_10" minlength="5" maxlength="500" type="text" class="validate">
+                <label for="step_10">Step 10</label>
+            </div>
+        </div>
+
+
+    </form>
+</div>
+
+{% endblock %}
