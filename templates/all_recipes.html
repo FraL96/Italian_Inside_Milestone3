@@ -1,41 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-{% for recipe in recipes %}
-{{ recipe.recipe_name}}<br>
-{{ recipe.author}}<br>
-{{ recipe.region}}<br>
-{{ recipe.category}}<br>
-{{ recipe.difficulty}}<br>
-{{ recipe.time}}<br>
-{{ recipe.quantity}}<br>
-{{ recipe.ingredients}}<br>
-{{ recipe.step_1}}<br>
-{{ recipe.step_2}}<br>
-{{ recipe.step_3}}<br>
-{{ recipe.step_4}}<br>
-{{ recipe.step_5}}<br>
-{{ recipe.step_6}}<br>
-{{ recipe.step_7}}<br>
-{{ recipe.step_8}}<br>
-{{ recipe.step_9}}<br>
-{{ recipe.step_10}}<br>
-{% endfor %}
+<h3 class="center-align">Find the recipe for you!</h3>
 
 <ul class="collapsible">
     <li>
-        <div class="collapsible-header white-text red darken-4 text-shadow"><i class="fas fa-caret-down"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        {% for category in categories %}
+        <div class="collapsible-header white-text red darken-4 text-shadow">
+            <i class="fas fa-caret-down"></i>
+            <strong>{{ category.category_name }}</strong>
+        </div>
+
+        {% for recipe in recipes %}
+        {% if recipe.category == category.category_name %}
+
+        <div class="collapsible-body">
+            {{ recipe.recipe_name }}
+            {% if recipe.type == "meat" %}
+            <i class="fas fa-drumstick-bite tooltipped" data-position="right" data-tooltip="Contains meat"></a></i>
+            {% elif recipe.type == "fish" %}
+            <i class="fas fa-fish tooltipped" data-position="right" data-tooltip="Contains fish"></i>
+            {% elif recipe.type == "veg" %}
+            <i class="fas fa-leaf tooltipped" data-position="right" data-tooltip="Vegetarian"></i>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
     </li>
-    <li>
-        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+
 </ul>
 
 {% endblock %}
