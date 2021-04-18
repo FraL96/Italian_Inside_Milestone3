@@ -5,7 +5,7 @@
 
 
 <div class="row">
-    <form class="col s12" method="POST" action="">
+    <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
 
         <!--Recipe name-->
         <div class="row">
@@ -45,17 +45,27 @@
             </div>
         </div>
 
-        <!--Type-->
+        <!--Option-->
         <div class="row">
-            <div class="input-field col s12 m10 offset-m1">
-                <i class="fas fa-exclamation prefix red-text text-darken-1"></i>
-                <select id="option" name="option" class="validate" required>
-                    <option value="" disabled selected>Type</option>
+            <div class="input-field col s12 m10 offset-m1 center-align">
+                <p> Select one option</p>
+
+                <p>
                     {% for option in options %}
-                    <option value="{{ option.option_name }}">{{ option.option_name }}</option>
+                    <label>
+                        <input name="option" type="radio" checked />
+                        <span value="{{ option.option_name }}">{{ option.option_name }}
+                            {% if option.option_name == "Contains meat" %}
+                            <i class="fas fa-drumstick-bite red-text text-darken-1"></i>
+                            {% elif option.option_name == "Contains fish" %}
+                            <i class="fas fa-fish red-text text-darken-1"></i>
+                            {% elif option.option_name == "Vegetarian" %}
+                            <i class="fas fa-leaf red-text text-darken-1"></i>
+                            {% endif %}
+                        </span>
+                    </label>
                     {% endfor %}
-                </select>
-                <label for="region">Select one option</label>
+                </p>
             </div>
         </div>
 
@@ -74,14 +84,13 @@
         </div>
 
         <!--Quantity-->
-        <div class="row col s12 m10 offset-m1">
-            <i class="fas fa-people-arrows prefix red-text text-darken-1"></i>
-            <form action="#">
-                <p class="range-field">
-                    <label for="quantity">For how many people</label>
-                    <input id="quantity" name="quantity" type="range" min="1" max="10" />
-                </p>
-            </form>
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-people-arrows prefix red-text text-darken-1"></i>
+                <input id="quantity" name="quantity" minlength="1" maxlength="2" pattern="^[0-9]{1,2}" type="text"
+                    class="validate" required>
+                <label for="quantity">Number portions</label>
+            </div>
         </div>
 
         <!--Ingredients-->
@@ -184,7 +193,15 @@
             </div>
         </div>
 
-
+        <!--Submit button-->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large waves-effect waves-light red darken-1 text-shadow">
+                    Add this new recipe
+                    <i class="fas fa-plus-square right"></i>
+                </button>
+            </div>
+        </div>
     </form>
 </div>
 

@@ -92,14 +92,40 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "region": request.form.get("region"),
+            "category": request.form.get("category"),
+            "option": request.form.get("option"),
+            "difficulty": request.form.get("difficulty"),
+            "quantity": request.form.get("quantity"),
+            "ingredients": request.form.get("ingredients"),
+            "step_1": request.form.get("step_1"),
+            "step_2": request.form.get("step_2"),
+            "step_3": request.form.get("step_3"),
+            "step_4": request.form.get("step_4"),
+            "step_5": request.form.get("step_5"),
+            "step_6": request.form.get("step_6"),
+            "step_7": request.form.get("step_7"),
+            "step_8": request.form.get("step_8"),
+            "step_9": request.form.get("step_9"),
+            "step_10": request.form.get("step_10"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe added!")
+        return redirect(url_for("profile", username=session["user"]))
+
     regions = mongo.db.regions.find().sort("region_name", 1)
     categories = mongo.db.categories.find().sort("category_name", 1)
     options = mongo.db.options.find().sort("option_name", 1)
     difficulty = mongo.db.difficulty.find().sort("difficulty_level", 1)
     return render_template("add_recipe.html", regions=regions,
-                           categories=categories, options=options, difficulty=difficulty)
+                           categories=categories, options=options,
+                           difficulty=difficulty)
 
 
 if __name__ == "__main__":
