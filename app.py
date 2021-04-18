@@ -128,6 +128,11 @@ def add_recipe():
                            difficulty=difficulty)
 
 
+@app.route("/homepage", methods=["GET"])
+def homepage():
+    return render_template("home_page.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

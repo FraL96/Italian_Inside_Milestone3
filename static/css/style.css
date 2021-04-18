@@ -14,12 +14,42 @@ body {
     overflow: scroll;
 }
 
-h3 {
+.titles {
     margin-top: 100px;
     margin-bottom: 50px;
     font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
     font-style: italic;
+}
+
+.space {
+    display: inline-block;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 100px;
+}
+
+.italia {
+    margin-right: -100px;
+    margin-top: 10px;
+}
+
+path:hover {
+    fill: #fff;
+}
+
+path.selected {
+    fill: #fff !important;
+}
+
+.regione {
+    transition: all 200ms ease-in-out;
+}
+
+h5 {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 300;
 }
 
 .playfair {
