@@ -6,8 +6,18 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+.custom {
+    background: radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
+}
+
 .collapsible {
     font-family: 'Roboto', sans-serif;
+}
+
+.phone-friendly {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
 }
 
 body {
