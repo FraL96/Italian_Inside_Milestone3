@@ -25,19 +25,30 @@ body {
 }
 
 .titles {
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 50px;
     font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
     font-style: italic;
 }
 
-.space {
-    display: inline-block;
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    margin-top: 100px;
+#footer {
+    position: absolute;
+    background-color: red;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    /* Footer height */
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+    /* Footer height */
 }
 
 .italia {
@@ -56,6 +67,7 @@ path.selected {
 .regione {
     transition: all 200ms ease-in-out;
 }
+
 
 h5 {
     font-family: 'Playfair Display', sans-serif;
@@ -84,11 +96,31 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
+.fixed-header {
+    width: 100%;
+    position: fixed;
+    margin-top: 0px;
+}
+
+.box {
+    width: 100%;
+    margin: 0;
+    /* Center the DIV horizontally */
+}
 
 /*-- big screens --*/
 @media only screen and (min-width: 768px) {
     .logo {
         width: 150px;
+    }
+
+    .space {
+        margin-top: 150px;
+    }
+
+    .italia {
+        width: 560px;
+        height: 663px;
     }
 }
 
@@ -96,5 +128,32 @@ p {
 @media only screen and (max-width: 600px) {
     .logo {
         width: 100px;
+    }
+
+    .space {
+        margin-top: 100px;
+        margin-bottom: 20px;
+        font-size: 50px;
+        text-align: left;
+    }
+
+    .desc {
+        text-align: right;
+    }
+
+    .instructions {
+        margin: 30px;
+        text-align: center;
+    }
+
+    .italia {
+        height: inherit;
+        width: inherit;
+        text-align: center;
+        margin: auto;
+    }
+
+    .small-ones {
+        font-family: 'Roboto', sans-serif;
     }
 }
