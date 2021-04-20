@@ -50,6 +50,7 @@ $(document).ready(function () {
     $('.regione').on('click', function () {
         $('.regione').removeClass('selected');
         $(this).addClass('selected');
+        window.location.href = 'templates/regions.html'
         console.log($(this).data('nome-regione'));
     });
 });
