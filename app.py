@@ -132,6 +132,11 @@ def add_recipe():
                            difficulty=difficulty)
 
 
+@app.route("/view_recipe")
+def view_recipe():
+    return render_template("recipe_view.html")
+
+
 @app.route("/homepage", methods=["GET"])
 def homepage():
     return render_template("home_page.html")

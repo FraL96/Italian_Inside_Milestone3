@@ -1,5 +1,5 @@
 /*-- fonts --*/
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Roboto:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Roboto:ital,wght@0,500;1,300;1,400&display=swap');
 
 /*-- general --*/
 .text-shadow {
@@ -26,6 +26,19 @@
     font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
     font-style: italic;
+}
+
+.categ {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.collection a.collection-item {
+    color: black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 #footer {
