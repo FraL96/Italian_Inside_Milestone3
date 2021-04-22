@@ -18,7 +18,14 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+# HOMEPAGE
+@app.route("/homepage", methods=["GET"])
+def homepage():
+    return render_template("home_page.html")
+
 # GET_RECIPES
+
+
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -161,19 +168,19 @@ def view_recipe():
     recipes = list(mongo.db.recipes.find_one())
     return render_template("recipe_view.html", recipes=recipes)
 
-# HOMEPAGE
-
-
-@app.route("/homepage", methods=["GET"])
-def homepage():
-    return render_template("home_page.html")
-
 # WINE
 
 
 @app.route("/wine")
 def wine():
     return render_template("wine.html")
+
+# REGIONS
+
+
+@app.route("/view_region", methods=["GET"])
+def view_region():
+    return render_template("regions.html")
 
 
 if __name__ == "__main__":
