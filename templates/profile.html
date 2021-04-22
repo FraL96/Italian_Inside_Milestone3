@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- title -->
 <div class="row">
     <div class="col s12 m8 offset-m2">
         <h3 class="center-align red-text text-darken-4 titles">
@@ -9,8 +10,33 @@
     </div>
 </div>
 
-<div class="center-align">
-    <a class="waves-effect waves-light btn-large red darken-2" href="{{ url_for('add_recipe') }}">Add a new recipe!</a>
+<!-- button to add a new recipe -->
+<div class="row">
+    <div class="center-align col s12 m8 offset-m2">
+        <a class="waves-effect waves-light btn-large red darken-2" href="{{ url_for('add_recipe') }}">Add a new
+            recipe!</a>
+    </div>
+</div>
+
+
+
+
+<!-- view my recipes -->
+<div class="row">
+    <div class="col s12 m4">
+
+        <ul class="collection with-header">
+            <!-- header -->
+            <li class="collection-header white-text red darken-4 text-shadow byme center-align">
+                <h4>Added by me</h4>
+            </li>
+            {% for recipe in recipes %}
+            {% if recipe.created_by == username %}
+            <a href="#!" class="collection-item center-align">{{ recipe.recipe_name }}</a>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 
 

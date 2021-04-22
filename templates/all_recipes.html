@@ -7,6 +7,25 @@
     </div>
 </div>
 
+
+<div class="row search-bar">
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix red-text text-darken-4"></i>
+                <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                <label for="query">Search Recipes</label>
+            </div>
+            <div class="col s12 m4">
+                <a href="{{ url_for('get_recipes')}}" class="red btn text-shadow"><i class="fas fa-undo"></i></a>
+                <button type="submit" class="green btn text-shadow"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
 <div class="row recipes">
     <div class="col s12 m6 offset-m3">
 
@@ -15,6 +34,7 @@
             <li class="collection-header white-text red darken-4 text-shadow categ center-align">
                 <h4>{{ category.category_name }}</h4>
             </li>
+
             {% for recipe in recipes %}
             {% if recipe.category == category.category_name %}
             <a href="{{ url_for('view_recipe') }}" class="collection-item center-align">{{ recipe.recipe_name }}

@@ -18,6 +18,7 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+# GET_RECIPES
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -25,12 +26,16 @@ def get_recipes():
     return render_template("all_recipes.html",
                            recipes=recipes, categories=categories)
 
+# SEARCH
+
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("home_page.html", recipes=recipes)
+    return render_template("all_recipes.html", recipes=recipes)
+
+# REGISTER
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -50,10 +55,11 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
+
+# LOGIN
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -78,6 +84,8 @@ def login():
 
     return render_template("login.html")
 
+# PROFILE
+
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
@@ -89,11 +97,25 @@ def profile(username):
 
     return redirect(url_for("login"))
 
+# GET_MYRECIPES
+
+
+@app.route("/get_myrecipes")
+def get_myrecipes():
+    recipes = list(mongo.db.recipes.find())
+    categories = list(mongo.db.categories.find())
+    return render_template("profile.html",
+                           recipes=recipes, categories=categories)
+
+# LOGOUT
+
 
 @app.route("/logout")
 def logout():
     session.pop("user")
     return redirect(url_for("login"))
+
+# ADD_RECIPE
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
@@ -131,15 +153,27 @@ def add_recipe():
                            categories=categories, options=options,
                            difficulty=difficulty)
 
+# VIEW_RECIPE
+
 
 @app.route("/view_recipe")
 def view_recipe():
-    return render_template("recipe_view.html")
+    recipes = list(mongo.db.recipes.find_one())
+    return render_template("recipe_view.html", recipes=recipes)
+
+# HOMEPAGE
 
 
 @app.route("/homepage", methods=["GET"])
 def homepage():
     return render_template("home_page.html")
+
+# WINE
+
+
+@app.route("/wine")
+def wine():
+    return render_template("wine.html")
 
 
 if __name__ == "__main__":
