@@ -10,6 +10,10 @@
     padding: 70px 0;
 }
 
+.logo {
+    z-index: 900;
+}
+
 .custom {
     background: radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
 }
@@ -129,6 +133,11 @@ p {
     width: 30px;
     height: auto;
     margin-top: 5px;
+}
+
+.wine {
+    width: 500px;
+    height: auto;
 }
 
 /*-- big screens --*/
