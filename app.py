@@ -178,9 +178,10 @@ def wine():
 # REGIONS
 
 
-@app.route("/view_region", methods=["GET"])
+@app.route("/view_region")
 def view_region():
-    return render_template("regions.html")
+    regions = list(mongo.db.regions.find_one())
+    return render_template("regions.html", regions=regions)
 
 
 if __name__ == "__main__":
