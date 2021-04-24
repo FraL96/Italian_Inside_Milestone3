@@ -53,5 +53,7 @@ $(document).ready(function () {
         console.log($(this).data('nome-regione'));
     });
 
-
+    $('.regione').click(function () {
+        window.location.href = '/view_region';
+    });
 });
