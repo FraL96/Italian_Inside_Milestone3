@@ -52,4 +52,6 @@ $(document).ready(function () {
         $(this).addClass('selected');
         console.log($(this).data('nome-regione'));
     });
+
+
 });

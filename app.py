@@ -23,9 +23,8 @@ mongo = PyMongo(app)
 def homepage():
     return render_template("home_page.html")
 
+
 # GET_RECIPES
-
-
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -33,18 +32,8 @@ def get_recipes():
     return render_template("all_recipes.html",
                            recipes=recipes, categories=categories)
 
-# SEARCH
-
-
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    query = request.form.get("query")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("all_recipes.html", recipes=recipes)
 
 # REGISTER
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -66,9 +55,8 @@ def register():
 
     return render_template("register.html")
 
+
 # LOGIN
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -91,9 +79,15 @@ def login():
 
     return render_template("login.html")
 
+
+# LOGOUT
+@app.route("/logout")
+def logout():
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 # PROFILE
-
-
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongo.db.users.find_one(
@@ -104,27 +98,8 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-# GET_MYRECIPES
-
-
-@app.route("/get_myrecipes")
-def get_myrecipes():
-    recipes = list(mongo.db.recipes.find())
-    categories = list(mongo.db.categories.find())
-    return render_template("profile.html",
-                           recipes=recipes, categories=categories)
-
-# LOGOUT
-
-
-@app.route("/logout")
-def logout():
-    session.pop("user")
-    return redirect(url_for("login"))
 
 # ADD_RECIPE
-
-
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -160,24 +135,38 @@ def add_recipe():
                            categories=categories, options=options,
                            difficulty=difficulty)
 
+
+# WINE
+@app.route("/wine")
+def wine():
+    return render_template("wine.html")
+
+
+# SEARCH
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("all_recipes.html", recipes=recipes)
+
+
+# ADDED BY ME
+@app.route("/added_by_me")
+def added_by_me():
+    recipes = list(mongo.db.recipes.find())
+    users = list(mongo.db.users.find())
+    return render_template("profile.html",
+                           recipes=recipes, users=users)
+
+
 # VIEW_RECIPE
-
-
 @app.route("/view_recipe")
 def view_recipe():
     recipes = list(mongo.db.recipes.find_one())
     return render_template("recipe_view.html", recipes=recipes)
 
-# WINE
-
-
-@app.route("/wine")
-def wine():
-    return render_template("wine.html")
 
 # REGIONS
-
-
 @app.route("/view_region")
 def view_region():
     regions = list(mongo.db.regions.find_one())

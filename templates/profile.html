@@ -10,6 +10,21 @@
     </div>
 </div>
 
+<!-- flash messages-->
+<section>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="div row flash">
+        <h4 class="red lighten-3 center-align">
+            {{ message }}
+        </h4>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+</section>
+
 <!-- button to add a new recipe -->
 <div class="row">
     <div class="center-align col s12 m8 offset-m2">
@@ -18,22 +33,20 @@
     </div>
 </div>
 
-
-
-
 <!-- view my recipes -->
 <div class="row">
     <div class="col s12 m6">
-
         <ul class="collection with-header">
             <!-- header -->
             <li class="collection-header white-text red darken-4 text-shadow byme center-align">
                 <h4>Added by me</h4>
             </li>
             {% for recipe in recipes %}
-            {% if recipe.created_by == username %}
-            <a href="#!" class="collection-item center-align">{{ recipe.recipe_name }}</a>
+            {% for user in users %}
+            {% if recipe.created_by == user.username %}
+            <a href="{{ url_for('view_recipe') }}" class="collection-item center-align">{{ recipe.recipe_name }}</a>
             {% endif %}
+            {% endfor %}
             {% endfor %}
         </ul>
     </div>
