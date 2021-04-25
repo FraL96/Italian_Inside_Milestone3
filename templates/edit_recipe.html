@@ -3,20 +3,20 @@
 
 <div class="row">
     <div class="col s12 m12 center-align">
-        <h3 class="titles">Add a new recipe!</h3>
+        <h3 class="titles">Edit your recipe</h3>
     </div>
 </div>
 
 
 <div class="row form">
-    <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
 
         <!--Recipe name-->
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-utensils prefix red-text text-darken-1"></i>
-                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="50" type="text" class="validate"
-                    required>
+                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="50" value="{{ recipe.recipe_name }}"
+                    type="text" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
@@ -26,9 +26,13 @@
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-map-signs prefix red-text text-darken-1"></i>
                 <select id="region" name="region" class="validate" required>
-                    <option value="" disabled selected>Region</option>
+                    <option value="" disabled>Region</option>
                     {% for region in regions %}
+                    {% if region.region_name == recipe.region %}
+                    <option value="{{ region.region_name }}" selected>{{ region.region_name }}</option>
+                    {% else %}
                     <option value="{{ region.region_name }}">{{ region.region_name }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
                 <label for="region">Select a region</label>
@@ -40,9 +44,13 @@
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-pizza-slice prefix red-text text-darken-1"></i>
                 <select id="category" name="category" class="validate" required>
-                    <option value="" disabled selected>Category</option>
+                    <option value="" disabled>Category</option>
                     {% for category in categories %}
+                    {% if category.category_name == recipe.category %}
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
                 <label for="region">Select a category</label>
@@ -56,8 +64,9 @@
 
                 <p>
                     {% for option in options %}
+                    {% if option.option_name == recipe.option %}
                     <label>
-                        <input name="option" id="option" value="{{ option.option_name }}" type="radio" />
+                        <input name="option" id="option" value="{{ recipe.option }}" type="radio" checked />
                         <span>{{ option.option_name }}
                             {% if option.option_name == "Contains meat" %}
                             <i class="fas fa-drumstick-bite red-text text-darken-1"></i>
@@ -68,6 +77,7 @@
                             {% endif %}
                         </span>
                     </label>
+                    {% endif %}
                     {% endfor %}
                 </p>
             </div>
@@ -78,9 +88,14 @@
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-dumbbell prefix red-text text-darken-1"></i>
                 <select id="difficulty" name="difficulty" class="validate" required>
-                    <option value="" disabled selected>Difficulty</option>
+                    <option value="" disabled>Difficulty</option>
                     {% for difficulty in difficulty %}
+                    {% if difficulty.difficulty_level == recipe.difficulty %}
+                    <option value="{{ difficulty.difficulty_level }}" selected>{{ difficulty.difficulty_level }}
+                    </option>
+                    {% else %}
                     <option value="{{ difficulty.difficulty_level }}">{{ difficulty.difficulty_level }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
                 <label for="region">Select a difficulty level</label>
@@ -91,8 +106,8 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-people-arrows prefix red-text text-darken-1"></i>
-                <input id="quantity" name="quantity" minlength="1" maxlength="2" pattern="^[0-9]{1,2}" type="text"
-                    class="validate" required>
+                <input id="quantity" name="quantity" minlength="1" maxlength="2" pattern="^[0-9]{1,2}"
+                    value="{{ recipe.quantity }}" type="text" class="validate" required>
                 <label for="quantity">Number servings</label>
             </div>
         </div>
@@ -101,8 +116,8 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-list prefix red-text text-darken-1"></i>
-                <input id="ingredients" name="ingredients" minlength="5" maxlength="200" type="text" class="validate"
-                    required>
+                <input id="ingredients" name="ingredients" minlength="5" maxlength="200"
+                    value="{{ recipe.ingredients }}" type="text" class="validate" required>
                 <label for="ingredients">Ingredients</label>
             </div>
         </div>
@@ -112,17 +127,24 @@
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
                 <textarea name="preparation" id="preparation" minlength="5" maxlength="1000"
-                    class="materialize-textarea validate" required></textarea>
+                    class="materialize-textarea validate" required>
+                    {{- recipe.preparation}}
+                </textarea>
                 <label for="preparation">Preparation</label>
             </div>
         </div>
 
+        <!--Cancel button-->
+
+
         <!--Submit button-->
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large waves-effect waves-light red darken-1 text-shadow">
-                    Add this new recipe
-                    <i class="fas fa-plus-square right"></i>
+                <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">Cancel changes <i
+                        class="fas fa-times-circle right"></i></a>
+                <button type="submit" class="btn-large waves-effect waves-light green darken-1 text-shadow">
+                    Save changes
+                    <i class="fas fa-edit right"></i>
                 </button>
             </div>
         </div>
