@@ -154,9 +154,16 @@ def edit_recipe(recipe_id):
                            categories=categories, options=options,
                            difficulty=difficulty)
 
+
+# DELETE
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe deleted")
+    return redirect(url_for("profile", username=session["user"]))
+
+
 # WINE
-
-
 @app.route("/wine")
 def wine():
     return render_template("wine.html")
