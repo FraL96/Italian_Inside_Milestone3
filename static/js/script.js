@@ -50,7 +50,7 @@ $(document).ready(function () {
     $('.regione').on('click', function () {
         $('.regione').removeClass('selected');
         $(this).addClass('selected');
-        window.location.href = '/view_region';
+        window.location.href = '/view_region/<region>';
         console.log($(this).data('nome-regione'));
     });
 });

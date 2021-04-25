@@ -42,11 +42,10 @@
                 <h4>Added by me</h4>
             </li>
             {% for recipe in recipes %}
-            {% for user in users %}
-            {% if recipe.created_by == user.username %}
-            <a href="{{ url_for('view_recipe') }}" class="collection-item center-align">{{ recipe.recipe_name }}</a>
+            {% if session.user|lower == recipe.created_by %}
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
+                class="collection-item center-align">{{ recipe.recipe_name }}</a>
             {% endif %}
-            {% endfor %}
             {% endfor %}
         </ul>
     </div>

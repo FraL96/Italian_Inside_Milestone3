@@ -3,8 +3,29 @@
 
 {% for recipe in recipes %}
 <div class="row">
-    <div class="col s12 m12 center-align">
-        <h3 class="titles">{{ recipe.recipe_name }}</h3>
+    <div class="col s12 l6 item">
+        <h3 class="titles center-align intro">{{ recipe.recipe_name }}</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 l6 offset-l7 item-special">
+        <h4><i class="fas fa-map-signs prefix red-text text-darken-1"></i> Region: <h5 class="rec">{{ recipe.region }}
+            </h5>
+        </h4>
+        <h4><i class="fas fa-dumbbell prefix red-text text-darken-1"></i> Difficulty: <h5 class="rec">
+                {{ recipe.difficulty }} </h5>
+        </h4>
+        <h4><i class="fas fa-people-arrows prefix red-text text-darken-1"></i> Servings: <h5 class="rec">
+                {{ recipe.quantity }} </h5>
+        </h4>
+        <h4><i class="fas fa-list prefix red-text text-darken-1"></i> Ingredients: <h5 class="rec">
+                {{ recipe.ingredients }} </h5>
+        </h4>
+        <h4><i class="fas fa-utensils prefix red-text text-darken-1"></i> Preparation <h5 class="rec">
+                {{ recipe.preparation }} </h5>
+        </h4>
+
     </div>
 </div>
 

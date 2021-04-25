@@ -171,6 +171,21 @@ def view_recipe(recipe_id):
                            recipes=recipes,)
 
 
+# REGIONS
+@ app.route("/view_region/<region>")
+def view_region(region):
+    regions = list(mongo.db.regions.find())
+    return render_template("regions.html", regions=regions)
+
+
+# ADDED BY ME
+@ app.route("/added_by_me/<username>")
+def added_by_me(username):
+    recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
+    return render_template("profile.html", username=session["user"],
+                           recipes=recipes)
+
+
 # WINE
 @ app.route("/wine")
 def wine():
@@ -183,22 +198,6 @@ def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("all_recipes.html", recipes=recipes)
-
-
-# ADDED BY ME
-@ app.route("/added_by_me")
-def added_by_me():
-    recipes = list(mongo.db.recipes.find())
-    users = list(mongo.db.users.find())
-    return render_template("profile.html",
-                           recipes=recipes, users=users)
-
-
-# REGIONS
-@ app.route("/view_region")
-def view_region():
-    regions = list(mongo.db.regions.find_one())
-    return render_template("regions.html", regions=regions)
 
 
 if __name__ == "__main__":
