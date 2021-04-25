@@ -163,14 +163,22 @@ def delete_recipe(recipe_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
+# VIEW_RECIPE
+@app.route("/view_recipe/<recipe_id>")
+def view_recipe(recipe_id):
+    recipes = list(mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
+    return render_template("recipe_view.html",
+                           recipes=recipes,)
+
+
 # WINE
-@app.route("/wine")
+@ app.route("/wine")
 def wine():
     return render_template("wine.html")
 
 
 # SEARCH
-@app.route("/search", methods=["GET", "POST"])
+@ app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
@@ -178,7 +186,7 @@ def search():
 
 
 # ADDED BY ME
-@app.route("/added_by_me")
+@ app.route("/added_by_me")
 def added_by_me():
     recipes = list(mongo.db.recipes.find())
     users = list(mongo.db.users.find())
@@ -186,15 +194,8 @@ def added_by_me():
                            recipes=recipes, users=users)
 
 
-# VIEW_RECIPE
-@app.route("/view_recipe")
-def view_recipe():
-    recipes = list(mongo.db.recipes.find())
-    return render_template("recipe_view.html", recipes=recipes)
-
-
 # REGIONS
-@app.route("/view_region")
+@ app.route("/view_region")
 def view_region():
     regions = list(mongo.db.regions.find_one())
     return render_template("regions.html", regions=regions)
