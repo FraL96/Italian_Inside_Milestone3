@@ -162,7 +162,7 @@ def added_by_me():
 # VIEW_RECIPE
 @app.route("/view_recipe")
 def view_recipe():
-    recipes = list(mongo.db.recipes.find_one())
+    recipes = list(mongo.db.recipes.find())
     return render_template("recipe_view.html", recipes=recipes)
 
 

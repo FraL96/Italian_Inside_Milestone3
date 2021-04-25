@@ -6,8 +6,14 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+.btn-small {
+    margin-left: 20px;
+    display: inline;
+}
+
 .logo {
     z-index: 900;
+    position: relative;
 }
 
 .custom {
@@ -47,6 +53,8 @@
     background-color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+    margin: 5px;
+    line-height: 42px;
 }
 
 #footer {
@@ -165,25 +173,12 @@ p {
 .search-bar {
     margin-left: -15px;
     margin-right: -15px;
-    z-index: -1;
-    position: relative;
 }
 
 .wine {
     background: url('https://res.cloudinary.com/cookbookii/image/upload/v1619284043/grapes-553463_1280_jdlwuq.jpg') no-repeat center fixed;
     background-size: cover;
 }
-
-.recipes {
-    position: relative;
-    z-index: -1;
-}
-
-.form {
-    position: relative;
-    z-index: -1;
-}
-
 
 /*-----------------|TABLET|----------------*/
 
