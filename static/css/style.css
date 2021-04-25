@@ -14,10 +14,6 @@
     background: radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
 }
 
-.collapsible {
-    font-family: 'Roboto', sans-serif;
-}
-
 .byme {
     font-size: smaller;
     font-family: 'Playfair Display', sans-serif;
@@ -33,7 +29,7 @@
 }
 
 .titles {
-    margin-top: 120px;
+    margin-top: 150px;
     margin-bottom: 30px;
     font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
@@ -169,6 +165,8 @@ p {
 .search-bar {
     margin-left: -15px;
     margin-right: -15px;
+    z-index: -1;
+    position: relative;
 }
 
 .wine {
@@ -176,14 +174,20 @@ p {
     background-size: cover;
 }
 
+.recipes {
+    position: relative;
+    z-index: -1;
+}
+
+.form {
+    position: relative;
+    z-index: -1;
+}
+
 
 /*-----------------|TABLET|----------------*/
 
 @media (min-width: 550px) {}
-
-/*-----------------|DESKTOP + IPAD PRO|----------------*/
-
-
 
 /*-----------------|LARGER DESKTOPS|----------------*/
 
