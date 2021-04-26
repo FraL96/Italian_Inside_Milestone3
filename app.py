@@ -3,6 +3,9 @@ from flask import (Flask, flash, render_template,
                    redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -112,6 +115,7 @@ def add_recipe():
             "quantity": request.form.get("quantity"),
             "ingredients": request.form.get("ingredients"),
             "preparation": request.form.get("preparation"),
+            "picture": request.form.get("picture"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
@@ -140,6 +144,7 @@ def edit_recipe(recipe_id):
             "quantity": request.form.get("quantity"),
             "ingredients": request.form.get("ingredients"),
             "preparation": request.form.get("preparation"),
+            "picture": request.form.get("picture"),
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, info)
