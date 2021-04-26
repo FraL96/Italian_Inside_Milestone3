@@ -41,6 +41,14 @@ h4 {
     font-family: 'Playfair Display', sans-serif;
 }
 
+.italic {
+    font-style: italic;
+}
+
+nav ul a {
+    font-size: large;
+}
+
 .pic {
     line-height: 10px;
 }
@@ -72,9 +80,13 @@ h4 {
 }
 
 .phone-friendly {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Playfair Display', sans-serif;
+    font-style: italic;
     margin-top: 50px;
+}
+
+.sidenav li>a {
+    font-size: medium;
 }
 
 .titles {

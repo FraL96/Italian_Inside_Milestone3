@@ -24,7 +24,7 @@
                 <div class="fixed-header">
                     <div class="box">
                         <!-- main navbar -->
-                        <nav class="nav-extended text-shadow red darken-2">
+                        <nav class="nav-extended text-shadow red darken-2 nice italic">
                             <div class="nav-wrapper">
                                 <a href="{{ url_for('index') }}"><img class="brand-logo center logo"
                                         src="https://res.cloudinary.com/cookbookii/image/upload/v1619191056/italian_inside_wyjltj.png"
@@ -32,17 +32,18 @@
                                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right draggable"><i
                                         class="fas fa-hamburger"></i></a>
                                 <ul class="left hide-on-med-and-down">
-                                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                                    <li><a href="{{ url_for('get_recipes') }}">All Recipes</a></li>
-                                    <li><a href="{{ url_for('wine') }}">Casale del Giglio</a></li>
+                                    <li><a href="{{ url_for('index') }}">- Home -</a></li>
+                                    <li><a href="{{ url_for('get_recipes') }}">- All Recipes -</a></li>
+                                    <li><a href="{{ url_for('wine') }}">- Casale del Giglio -</a></li>
                                 </ul>
                                 <ul class="right hide-on-med-and-down">
                                     {% if session.user %}
-                                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                                    <li><a href="{{ url_for('profile', username=session['user']) }}">- Profile -</a>
+                                    </li>
+                                    <li><a href="{{ url_for('logout') }}">- Log Out -</a></li>
                                     {% else %}
-                                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                                    <li><a href="{{ url_for('login') }}">- Log In -</a></li>
+                                    <li><a href="{{ url_for('register') }}">- Register -</a></li>
                                     {% endif %}
                                 </ul>
                             </div>
@@ -58,15 +59,16 @@
                     <a href="{{ url_for('index') }}"><img class="brand-logo logo"
                             src="https://res.cloudinary.com/cookbookii/image/upload/v1619191056/italian_inside_wyjltj.png"
                             alt="Italian Inside"></a>
-                    <li><a class="white-text phone-friendly" href="{{ url_for('get_recipes') }}">All Recipes</a></li>
-                    <li><a class="white-text phone-friendly" href="{{ url_for('wine') }}">Casale del Giglio</a></li>
+                    <li><a class="white-text phone-friendly" href="{{ url_for('get_recipes') }}">- All Recipes -</a>
+                    </li>
+                    <li><a class="white-text phone-friendly" href="{{ url_for('wine') }}">- Casale del Giglio -</a></li>
                     {% if session.user %}
-                    <li><a class="white-text phone-friendly"
-                            href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a class="white-text phone-friendly" href="{{ url_for('logout') }}">Log Out</a></li>
+                    <li><a class="white-text phone-friendly" href="{{ url_for('profile', username=session['user']) }}">-
+                            Profile -</a></li>
+                    <li><a class="white-text phone-friendly" href="{{ url_for('logout') }}">- Log Out -</a></li>
                     {% else %}
-                    <li><a class="white-text phone-friendly" href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a class="white-text phone-friendly" href="{{ url_for('register') }}">Register</a></li>
+                    <li><a class="white-text phone-friendly" href="{{ url_for('login') }}">- Log In -</a></li>
+                    <li><a class="white-text phone-friendly" href="{{ url_for('register') }}">- Register -</a></li>
                     {% endif %}
                 </ul>
             </header>
