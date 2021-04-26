@@ -26,8 +26,8 @@
         <div class="row ">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="pic fas fa-camera prefix red-text text-darken-1"></i>
-                <input name="picture" id="picture" type="file" class="file-upload" data-cloudinary-field="image_id"
-                    data-form-data="{ 'transformation': {'crop':'limit','tags':'samples','width':3000,'height':2000}}" />
+                <input name="file" type="file" class="cloudinary-fileupload" data-cloudinary-field="image_id"
+                    data-form-data="[upload-preset-and-other-upload-options-as-html-escaped-JSON-data]"></input>
             </div>
         </div>
 
@@ -104,6 +104,16 @@
                 <input id="quantity" name="quantity" minlength="1" maxlength="2" pattern="^[0-9]{1,2}" type="text"
                     class="validate" required>
                 <label for="quantity">Number servings</label>
+            </div>
+        </div>
+
+        <!--Wine Pairing-->
+        <div class="row">
+            <div class="input-field col s12 m10 offset-m1">
+                <i class="fas fa-wine-bottle prefix red-text text-darken-1"></i>
+                <input id="wine_pairing" name="wine_pairing" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
+                <label for="wine_pairing">Wine pairing</label>
             </div>
         </div>
 

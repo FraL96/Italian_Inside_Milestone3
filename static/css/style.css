@@ -127,6 +127,7 @@ h5 {
 
 p {
     font-family: 'Roboto', sans-serif;
+    font-size: x-large;
 }
 
 .fixed-header {
@@ -235,6 +236,6 @@ p {
     }
 
     .item-special {
-        margin-top: -10%;
+        margin-top: -30%;
     }
 }

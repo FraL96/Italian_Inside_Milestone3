@@ -3,24 +3,27 @@
 
 {% for recipe in recipes %}
 <div class="row">
-    <div class="col s12 l6 item">
-        <h3 class="titles center-align intro">{{ recipe.recipe_name }}</h3>
+    <div class="col s12 l5 item">
+        <h3 class="titles intro">{{ recipe.recipe_name }}</h3>
+        <img src="{{ recipe.picture }}" width="50%" height="auto" alt="Recipe" class="center-align">
     </div>
 </div>
-
 <div class="row">
-    <div class="col s12 l6 offset-l7 item-special">
-        <h4><i class="fas fa-map-signs prefix red-text text-darken-1"></i> Region: <h5 class="rec">{{ recipe.region }}
+    <div class="col s12 l7 offset-l6 item-special">
+        <h4><i class="fas fa-map-signs prefix red-text text-darken-1"></i> Region <h5 class="rec">{{ recipe.region }}
             </h5>
         </h4>
-        <h4><i class="fas fa-dumbbell prefix red-text text-darken-1"></i> Difficulty: <h5 class="rec">
+        <h4><i class="fas fa-dumbbell prefix red-text text-darken-1"></i> Difficulty <h5 class="rec">
                 {{ recipe.difficulty }} </h5>
         </h4>
-        <h4><i class="fas fa-people-arrows prefix red-text text-darken-1"></i> Servings: <h5 class="rec">
+        <h4><i class="fas fa-people-arrows prefix red-text text-darken-1"></i> Servings <h5 class="rec">
                 {{ recipe.quantity }} </h5>
         </h4>
-        <h4><i class="fas fa-list prefix red-text text-darken-1"></i> Ingredients: <h5 class="rec">
+        <h4><i class="fas fa-list prefix red-text text-darken-1"></i> Ingredients <h5 class="rec">
                 {{ recipe.ingredients }} </h5>
+        </h4>
+        <h4><i class="fas fa-wine-bottle prefix red-text text-darken-1"></i> Wine pairing <h5 class="rec">
+                {{ recipe.wine_pairing }} </h5>
         </h4>
         <h4><i class="fas fa-utensils prefix red-text text-darken-1"></i> Preparation <h5 class="rec">
                 {{ recipe.preparation }} </h5>
@@ -28,6 +31,7 @@
 
     </div>
 </div>
+
 
 {% endfor %}
 {% endblock %}

@@ -36,6 +36,14 @@ def get_recipes():
                            recipes=recipes, categories=categories)
 
 
+# SEARCH
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("all_recipes.html", recipes=recipes)
+
+
 # REGISTER
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -114,6 +122,7 @@ def add_recipe():
             "difficulty": request.form.get("difficulty"),
             "quantity": request.form.get("quantity"),
             "ingredients": request.form.get("ingredients"),
+            "wine_pairing": request.form.get("wine_pairing"),
             "preparation": request.form.get("preparation"),
             "picture": request.form.get("picture"),
             "created_by": session["user"]
@@ -143,6 +152,7 @@ def edit_recipe(recipe_id):
             "difficulty": request.form.get("difficulty"),
             "quantity": request.form.get("quantity"),
             "ingredients": request.form.get("ingredients"),
+            "wine_pairing": request.form.get("wine_pairing"),
             "preparation": request.form.get("preparation"),
             "picture": request.form.get("picture"),
             "created_by": session["user"]
@@ -173,18 +183,18 @@ def delete_recipe(recipe_id):
 def view_recipe(recipe_id):
     recipes = list(mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
     return render_template("recipe_view.html",
-                           recipes=recipes,)
+                           recipes=recipes)
 
 
 # REGIONS
-@ app.route("/view_region/<region>")
-def view_region(region):
-    regions = list(mongo.db.regions.find())
+@app.route("/view_region/<region_id>")
+def view_region(region_id):
+    regions = list(mongo.db.regions.find({"_id": ObjectId(region_id)}))
     return render_template("regions.html", regions=regions)
 
 
 # ADDED BY ME
-@ app.route("/added_by_me/<username>")
+@app.route("/added_by_me/<username>")
 def added_by_me(username):
     recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
     return render_template("profile.html", username=session["user"],
@@ -192,17 +202,9 @@ def added_by_me(username):
 
 
 # WINE
-@ app.route("/wine")
+@app.route("/wine")
 def wine():
     return render_template("wine.html")
-
-
-# SEARCH
-@ app.route("/search", methods=["GET", "POST"])
-def search():
-    query = request.form.get("query")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("all_recipes.html", recipes=recipes)
 
 
 if __name__ == "__main__":

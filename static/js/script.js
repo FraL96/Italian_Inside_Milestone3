@@ -5,6 +5,9 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
     $('.tooltipped').tooltip();
     $('select').formSelect();
+    $('.upload_form').append($.cloudinary.unsigned_upload_tag("zcudy0uz", {
+        cloud_name: 'cookbookii'
+    }));
 
     validateMaterializeSelect();
 
@@ -50,7 +53,7 @@ $(document).ready(function () {
     $('.regione').on('click', function () {
         $('.regione').removeClass('selected');
         $(this).addClass('selected');
-        window.location.href = '/view_region/<region>';
+        window.location.href = ("view_region");
         console.log($(this).data('nome-regione'));
     });
 });
