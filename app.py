@@ -21,9 +21,9 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-# HOMEPAGE
-@app.route("/homepage", methods=["GET"])
-def homepage():
+# INDEX
+@app.route("/index", methods=["GET"])
+def index():
     return render_template("index.html")
 
 

@@ -12,6 +12,16 @@ h4 {
     font-style: italic;
 }
 
+.join {
+    font-family: 'Playfair Display', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    border: 20px;
+    color: red;
+    background-color: #fff;
+}
+
 .background {
     background-image: url(https://res.cloudinary.com/cookbookii/image/upload/v1619284043/grapes-553463_1280_jdlwuq.jpg);
     background-position: center;
@@ -20,6 +30,15 @@ h4 {
     height: 700px;
     width: auto;
     margin: 0%;
+}
+
+.social-icons {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.nice {
+    font-family: 'Playfair Display', sans-serif;
 }
 
 .pic {

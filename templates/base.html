@@ -9,12 +9,12 @@
         crossorigin="anonymous" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
-    <link rel="shortcut icon" type="image/png"
-        href="https://res.cloudinary.com/cookbookii/image/upload/v1619191147/pizza_ot66tv.png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Italian Inside - Home</title>
+    <title>Italian Inside</title>
+    <link rel="shortcut icon" type="image/png"
+        href="https://res.cloudinary.com/cookbookii/image/upload/v1619191147/pizza_ot66tv.png">
 </head>
 
 <body>
@@ -87,19 +87,50 @@
             {% endblock %}
         </div>
 
-        <footer id="footer">
-            <div class="center-align social-links">
-                <a target="_blank" href="https://www.facebook.com/">
-                    <i class="fab fa-facebook"></i>
-                </a>
-
-                <a target="_blank" href="https://www.instagram.com/">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-                <a target="_blank" href="https://www.youtube.com/">
-                    <i class="fab fa-youtube"></i>
-                </a>
+        <!-- Footer -->
+        <footer class="page-footer red darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h4 class="white-text">Join us!</h4>
+                        <p class="white-text nice">
+                            Italian Inside was born from the desire of creating a meeting between Italian people that
+                            want to share the delicious heritage that their <em>nonna</em> left to them, and cuisine
+                            enthusiasts from every corner of the word.
+                        </p>
+                        <p class="white-text nice">
+                            If you are Italian or you are a citizen of the world, it doesn't matter.<br>
+                            We can all be Italians...Inside!
+                        </p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h4 class="white-text">Newsletter</h4>
+                        <p class="white-text text-lighten-4">
+                            Subscribe to receive monthly emails with news, fun facts and delicious recipes!
+                        </p>
+                        <!-- sign in for newsletter-->
+                        <form method="POST" action="">
+                            <div class="input-field ">
+                                <input id="email" name="email" type="email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="validate">
+                                <label for="email" class="white-text">Email</label>
+                            </div>
+                            <!-- Subscribe button -->
+                            <button type="submit" class="col s4 btn join">Join</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container white-text nice">
+                    © 2020 Francesca Lupu
+                    <a class="white-text right social-icons" target="_blank" href="https://youtube.com/"><i
+                            class="fab fa-youtube-square"></i></a>
+                    <a class="white-text right social-icons" target="_blank" href="https://www.instagram.com/"><i
+                            class="fab fa-instagram-square"></i></a>
+                    <a class="white-text right social-icons" target="_blank" href="https://www.facebook.com/"><i
+                            class="fab fa-facebook-square"></i></a>
+                </div>
             </div>
         </footer>
     </div>
