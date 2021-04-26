@@ -85,6 +85,10 @@ nav ul a {
     margin-top: 50px;
 }
 
+.round-button {
+    border-radius: 50%;
+}
+
 .sidenav li>a {
     font-size: medium;
 }
