@@ -127,7 +127,7 @@ h5 {
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: x-large;
+    font-size: medium;
 }
 
 .fixed-header {
@@ -193,6 +193,10 @@ p {
 .wine {
     background: url('https://res.cloudinary.com/cookbookii/image/upload/v1619284043/grapes-553463_1280_jdlwuq.jpg') no-repeat center fixed;
     background-size: cover;
+}
+
+.image {
+    border: solid black 5px;
 }
 
 /*-----------------|TABLET|----------------*/
