@@ -12,6 +12,16 @@ h4 {
     font-style: italic;
 }
 
+.background {
+    background-image: url(https://res.cloudinary.com/cookbookii/image/upload/v1619284043/grapes-553463_1280_jdlwuq.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: auto;
+    margin: 0%;
+}
+
 .pic {
     line-height: 10px;
 }
