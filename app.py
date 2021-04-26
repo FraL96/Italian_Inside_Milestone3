@@ -24,7 +24,7 @@ mongo = PyMongo(app)
 # HOMEPAGE
 @app.route("/homepage", methods=["GET"])
 def homepage():
-    return render_template("home_page.html")
+    return render_template("index.html")
 
 
 # GET_RECIPES
