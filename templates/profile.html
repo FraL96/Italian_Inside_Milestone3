@@ -37,7 +37,9 @@
 
 <div class="row">
     <div class="col s12 m6">
-        <h5 class="card-panel black-text red darken-4 byme center-align custom">Added by me</h5>
+        <h5 class="card-panel black-text red darken-4 byme center-align custom"><i class="fas fa-plus"></i> Added by me
+            <i class="fas fa-plus"></i>
+        </h5>
         <ul class="collapsible">
             {% for recipe in user_recipes %}
             <li>
@@ -88,5 +90,13 @@
         </ul>
     </div>
 
+    <div class="col s12 m6">
+        <h5 class="card-panel black-text red darken-4 byme center-align custom"><i class="fas fa-heart"></i> My
+            Favorites <i class="fas fa-heart"></i></h5>
+        <ul class="collapsible">
+        </ul>
+    </div>
+</div>
 
-    {% endblock %}
+
+{% endblock %}
