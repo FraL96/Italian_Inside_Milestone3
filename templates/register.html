@@ -35,8 +35,7 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m4">
                 <i class="fas fa-user-plus prefix red-text text-darken-2"></i>
-                <input id="username" name="username" type="text" minlength="3" maxlength="20"
-                    pattern="^[a-zA-Z0-9]{3,20}" class="validate" required>
+                <input id="username" name="username" type="text" pattern="^[a-zA-Z0-9]{3,20}" class="validate" required>
                 <label for="username">Username</label>
                 <span class="helper-text" data-error="Must be between 3-20 characters, only letters and numbers"
                     data-success="Perfect!">Must be between 3 and 20 characters, only letters and digits</span>
@@ -45,7 +44,7 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m4">
                 <i class="fas fa-user-lock prefix red-text text-darken-2"></i>
-                <input id="password" name="password" type="password" minlength="5" maxlength="20"
+                <input id="password" name="password" type="password"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{5,20}$" class="validate" required>
                 <label for="password">Password</label>
                 <span class="helper-text"

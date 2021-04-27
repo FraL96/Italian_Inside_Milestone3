@@ -22,11 +22,13 @@
         </div>
 
         <!--Picture-->
-        <div class="row ">
+        <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="pic fas fa-camera prefix red-text text-darken-1"></i>
-                <input name="picture" id="picture" type="file" class="file-upload" data-cloudinary-field="image_id"
-                    data-form-data="{ 'transformation': {'crop':'limit','tags':'samples','width':3000,'height':2000}}" />
+                <input id="picture" name="picture" type="url" value="{{ recipe.picture }}" pattern="https?://.+"
+                    minlength="6" maxlength="900" class="validate" required>
+                <label for="picture">Image URL</label>
+                <span class="helper-text" data-error="Please, enter a valid URL" data-success="Great!"></span>
             </div>
         </div>
 
@@ -115,9 +117,10 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-people-arrows prefix red-text text-darken-1"></i>
-                <input id="quantity" name="quantity" minlength="1" maxlength="2" pattern="^[0-9]{1,2}"
-                    value="{{ recipe.quantity }}" type="text" class="validate" required>
+                <input id="quantity" name="quantity" pattern="^[0-9]{1,2}" minlength="1" maxlength="2"
+                    pattern="^[0-9]{1,2}" value="{{ recipe.quantity }}" type="text" class="validate" required>
                 <label for="quantity">Number servings</label>
+                <span class="helper-text" data-error="Please, insert a number from 1 to 99"></span>
             </div>
         </div>
 
@@ -125,7 +128,7 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-wine-bottle prefix red-text text-darken-1"></i>
-                <input id="wine_pairing" name="wine_pairing" minlength="5" maxlength="50"
+                <input id="wine_pairing" name="wine_pairing" pattern="^[a-zA-Z0-9]{5,50}" minlength="5" maxlength="50"
                     value="{{ recipe.wine_pairing }}" type="text" class="validate" required>
                 <label for="wine_pairing">Wine pairing</label>
             </div>
@@ -134,10 +137,14 @@
         <!--Ingredients-->
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
-                <i class="fas fa-list prefix red-text text-darken-1"></i>
-                <input id="ingredients" name="ingredients" minlength="5" maxlength="200"
-                    value="{{ recipe.ingredients }}" type="text" class="validate" required>
+                <i class="fas fa-utensils prefix red-text text-darken-1"></i>
+                <textarea name="ingredients" id="ingredients" minlength="5" maxlength="1000"
+                    class="materialize-textarea validate" required>
+                    {{- recipe.ingredients -}}
+                </textarea>
                 <label for="ingredients">Ingredients</label>
+                <span class="helper-text" data-error="Wrong" data-success="Perfect!"> Please, write every ingredient on
+                    a new line </span>
             </div>
         </div>
 
@@ -150,6 +157,8 @@
                     {{- recipe.preparation -}}
                 </textarea>
                 <label for="preparation">Preparation</label>
+                <span class="helper-text" data-error="Wrong" data-success="Perfect!"> Please, write every step on a new
+                    line </span>
             </div>
         </div>
 

@@ -16,18 +16,20 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-utensils prefix red-text text-darken-1"></i>
-                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="50" type="text" class="validate"
-                    required>
+                <input id="recipe_name" name="recipe_name" pattern="^[a-zA-Z0-9]{3,50}" minlength="3" maxlength="50"
+                    type="text" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
 
         <!--Picture-->
-        <div class="row ">
+        <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="pic fas fa-camera prefix red-text text-darken-1"></i>
-                <input name="file" type="file" class="cloudinary-fileupload" data-cloudinary-field="image_id"
-                    data-form-data="[upload-preset-and-other-upload-options-as-html-escaped-JSON-data]"></input>
+                <input id="picture" name="picture" type="url" pattern="https?://.+" minlength="6" maxlength="900"
+                    class="validate" required>
+                <label for="picture">Image URL</label>
+                <span class="helper-text" data-error="Please, enter a valid URL" data-success="Great!"></span>
             </div>
         </div>
 
@@ -103,7 +105,8 @@
                 <i class="fas fa-people-arrows prefix red-text text-darken-1"></i>
                 <input id="quantity" name="quantity" minlength="1" maxlength="2" pattern="^[0-9]{1,2}" type="text"
                     class="validate" required>
-                <label for="quantity">Number servings</label>
+                <label for="quantity">Number of servings</label>
+                <span class="helper-text" data-error="Please, insert a number from 1 to 99"></span>
             </div>
         </div>
 
@@ -111,8 +114,8 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-wine-bottle prefix red-text text-darken-1"></i>
-                <input id="wine_pairing" name="wine_pairing" minlength="5" maxlength="50" type="text" class="validate"
-                    required>
+                <input id="wine_pairing" name="wine_pairing" pattern="^[a-zA-Z0-9]{5,50}" minlength="5" maxlength="50"
+                    type="text" class="validate" required>
                 <label for="wine_pairing">Wine pairing</label>
             </div>
         </div>
@@ -120,10 +123,12 @@
         <!--Ingredients-->
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
-                <i class="fas fa-list prefix red-text text-darken-1"></i>
-                <input id="ingredients" name="ingredients" minlength="5" maxlength="200" type="text" class="validate"
-                    required>
+                <i class="fas fa-utensils prefix red-text text-darken-1"></i>
+                <textarea name="ingredients" id="ingredients" minlength="5" maxlength="1000"
+                    class="materialize-textarea validate" required></textarea>
                 <label for="ingredients">Ingredients</label>
+                <span class="helper-text" data-error="Wrong" data-success="Perfect!"> Please, write every ingredient on
+                    a new line </span>
             </div>
         </div>
 
@@ -134,6 +139,8 @@
                 <textarea name="preparation" id="preparation" minlength="5" maxlength="1000"
                     class="materialize-textarea validate" required></textarea>
                 <label for="preparation">Preparation</label>
+                <span class="helper-text" data-error="Wrong" data-success="Perfect!"> Please, write every step on a new
+                    line </span>
             </div>
         </div>
 
