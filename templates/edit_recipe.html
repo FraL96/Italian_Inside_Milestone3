@@ -128,7 +128,7 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-wine-bottle prefix red-text text-darken-1"></i>
-                <input id="wine_pairing" name="wine_pairing" pattern="^[a-zA-Z0-9]{5,50}" minlength="5" maxlength="50"
+                <input id="wine_pairing" name="wine_pairing" minlength="5" maxlength="50"
                     value="{{ recipe.wine_pairing }}" type="text" class="validate" required>
                 <label for="wine_pairing">Wine pairing</label>
             </div>
@@ -152,8 +152,8 @@
         <div class="row">
             <div class="input-field col s12 m10 offset-m1">
                 <i class="fas fa-dot-circle prefix red-text text-darken-1"></i>
-                <textarea name="preparation" id="preparation" minlength="5" maxlength="1000"
-                    class="materialize-textarea validate" required>
+                <textarea name="preparation" id="preparation" minlength="5" class="materialize-textarea validate"
+                    required>
                     {{- recipe.preparation -}}
                 </textarea>
                 <label for="preparation">Preparation</label>

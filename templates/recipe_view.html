@@ -1,36 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for recipe in recipes %}
-<div class="row">
-    <div class="col s12 l5 item">
-        <h3 class="titles intro">{{ recipe.recipe_name }}</h3>
-        <img src="{{ recipe.picture }}" width="50%" height="auto" alt="Recipe" class="center-align image">
-    </div>
-</div>
-<div class="row">
-    <div class="col s12 l7 offset-l6 item-special">
-        <h4><i class="fas fa-map-signs prefix red-text text-darken-1"></i> Region <h5 class="rec">{{ recipe.region }}
-            </h5>
-        </h4>
-        <h4><i class="fas fa-dumbbell prefix red-text text-darken-1"></i> Difficulty <h5 class="rec">
-                {{ recipe.difficulty }} </h5>
-        </h4>
-        <h4><i class="fas fa-people-arrows prefix red-text text-darken-1"></i> Servings <h5 class="rec">
-                {{ recipe.quantity }} </h5>
-        </h4>
-        <h4><i class="fas fa-list prefix red-text text-darken-1"></i> Ingredients <h5 class="rec">
-                {{ recipe.ingredients }} </h5>
-        </h4>
-        <h4><i class="fas fa-wine-bottle prefix red-text text-darken-1"></i> Wine pairing <h5 class="rec">
-                {{ recipe.wine_pairing }} </h5>
-        </h4>
-        <h4><i class="fas fa-utensils prefix red-text text-darken-1"></i> Preparation <h5 class="rec">
-                {{ recipe.preparation }} </h5>
-        </h4>
 
+<div class="row">
+    <div class="col s12 m12 center-align">
+        {% for recipe in recipes %}
+        <h3 class="titles">- {{ recipe.recipe_name }} -</h3>
     </div>
 </div>
+
+<div class="row">
+    <div class="col s12 l6">
+        <img src="{{ recipe.picture }}" width="70%" height="auto" alt="Recipe" class="center-align image">
+    </div>
+    <div class="col s12 l6">
+        <h6><i class="fas fa-map-signs prefix"></i> Region: {{ recipe.region }}</p>
+        </h6>
+        <h6><i class="fas fa-dumbbell prefix"></i> Difficulty:{{ recipe.difficulty }}
+        </h6>
+        <h6><i class="fas fa-people-arrows prefix"></i> Servings:{{ recipe.quantity }}
+        </h6>
+        <h6><i class="fas fa-wine-bottle prefix"></i> Better if tasted with a glass
+            of:{{ recipe.wine_pairing }}
+        </h6>
+        <br>
+        <h6><i class="fas fa-list prefix"></i> Ingredients </h6>
+        <ul>
+            {% for list in recipe.ingredients.splitlines() %}
+            <li>
+                <p><i class="far fa-dot-circle"></i> {{list}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col l8 offset-l2">
+        <h4 class="center-align">Preparation</h4>
+        <ol>
+            {% for steps in recipe.preparation.splitlines() %}
+            <li>
+                <p>{{steps}}</p>
+            </li>
+            {% endfor %}
+        </ol>
+        <h4 class="center-align red-text text-darken-4">Buon Appetito!</h4>
+    </div>
+</div>
+
+
+
 
 
 {% endfor %}

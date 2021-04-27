@@ -38,7 +38,7 @@
 }
 
 .desserts {
-    background-image: url("https://images.pexels.com/photos/6210804/pexels-photo-6210804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: url("https://cdn.pixabay.com/photo/2020/01/05/07/15/colorful-4742428_1280.jpg");
     background-position: center;
 }
 
@@ -213,6 +213,7 @@ h5 {
 p {
     font-family: 'Roboto', sans-serif;
     font-size: medium;
+    font-style: italic;
 }
 
 .fixed-header {
