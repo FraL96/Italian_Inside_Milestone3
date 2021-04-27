@@ -30,6 +30,7 @@
                 <i class="fas fa-user-cog prefix red-text text-darken-2"></i>
                 <input id="username" name="username" type="text" pattern="^[a-zA-Z0-9]{3,20}" class="validate" required>
                 <label for="username">Username</label>
+                <span class="helper-text" data-error="Wrong, try again!" data-success="Perfect!">3-20 characters</span>
             </div>
         </div>
         <div class="row">
@@ -37,6 +38,7 @@
                 <i class="fas fa-user-lock prefix red-text text-darken-2"></i>
                 <input id="password" name="password" type="password" class="validate" required>
                 <label for="password">Password</label>
+                <span class="helper-text" data-error="Wrong, try again!" data-success="Perfect!">5-20 characters</span>
             </div>
         </div>
         <button type="submit" class="col s12 m10 offset-m4 btn-large red darken-2 playfair">Log In</button>

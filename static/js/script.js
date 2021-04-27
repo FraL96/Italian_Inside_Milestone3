@@ -5,9 +5,7 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
     $('.tooltipped').tooltip();
     $('select').formSelect();
-    $('.upload_form').append($.cloudinary.unsigned_upload_tag("zcudy0uz", {
-        cloud_name: 'cookbookii'
-    }));
+    $('.modal').modal();
 
     validateMaterializeSelect();
 

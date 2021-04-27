@@ -3,9 +3,6 @@ from flask import (Flask, flash, render_template,
                    redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -21,13 +18,20 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-# INDEX
+# ------------------INDEX-------------------
 @app.route("/index", methods=["GET"])
 def index():
     return render_template("index.html")
 
 
-# GET_RECIPES
+# ------------------REGIONS-------------------
+@app.route("/view_region/<region_id>")
+def view_region(region_id):
+    regions = list(mongo.db.regions.find({"_id": ObjectId(region_id)}))
+    return render_template("regions.html", regions=regions)
+
+
+# ------------------ALL RECIPES-------------------
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -36,82 +40,54 @@ def get_recipes():
                            recipes=recipes, categories=categories)
 
 
-# SEARCH
+# ------------------SEARCH-------------------
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    print("This is a recipe")
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("all_recipes.html", recipes=recipes)
 
 
-# REGISTER
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    if request.method == "POST":
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
-            flash("This username already exists. Try again.")
-            return redirect(url_for("register"))
-
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
-        mongo.db.users.insert_one(register)
-
-        session["user"] = request.form.get("username").lower()
-        return redirect(url_for("profile", username=session["user"]))
-
-    return render_template("register.html")
+# ------------------RECIPE VIEW-------------------
+@app.route("/view_recipe/<recipe_id>")
+def view_recipe(recipe_id):
+    recipes = list(mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
+    return render_template("recipe_view.html",
+                           recipes=recipes)
 
 
-# LOGIN
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
-            if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                return redirect(url_for("profile", username=session["user"]))
-
-            else:
-                flash("Ops! Username and/or Password are incorrect")
-                return redirect(url_for("login"))
-
-        else:
-            flash("Ops! Username and/or Password are incorrect")
-            return redirect(url_for("login"))
-
-    return render_template("login.html")
+# ------------------CASALE DEL GIGLIO-------------------
+@app.route("/wine")
+def wine():
+    return render_template("wine.html")
 
 
-# LOGOUT
-@app.route("/logout")
-def logout():
-    session.pop("user")
-    return redirect(url_for("login"))
-
-
-# PROFILE
+# ------------------PROFILE-------------------
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
-
+        if session["user"] == "admin":
+            user_recipes = list(mongo.db.recipes.find())
+        else:
+            user_recipes = list(
+                mongo.db.recipes.find({"created_by": session["user"]}))
+        return render_template(
+            "profile.html", username=username, user_recipes=user_recipes)
     return redirect(url_for("login"))
 
 
-# ADD_RECIPE
+# ------------------ADDED BY ME-------------------
+@app.route("/added_by_me/<username>")
+def added_by_me(username):
+    recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
+    return render_template("profile.html", username=session["user"],
+                           recipes=recipes)
+
+
+# ------------------ADD RECIPE-------------------
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -141,7 +117,7 @@ def add_recipe():
                            difficulty=difficulty)
 
 
-# EDIT RECIPE
+# ------------------EDIT RECIPE-------------------
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -171,7 +147,7 @@ def edit_recipe(recipe_id):
                            difficulty=difficulty)
 
 
-# DELETE
+# ------------------DELETE RECIPE-------------------
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -179,35 +155,61 @@ def delete_recipe(recipe_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
-# VIEW_RECIPE
-@app.route("/view_recipe/<recipe_id>")
-def view_recipe(recipe_id):
-    recipes = list(mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
-    return render_template("recipe_view.html",
-                           recipes=recipes)
+# ------------------LOGIN-------------------
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for("profile", username=session["user"]))
+
+            else:
+                flash("Ops! Username and/or Password are incorrect")
+                return redirect(url_for("login"))
+
+        else:
+            flash("Ops! Username and/or Password are incorrect")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
 
 
-# REGIONS
-@app.route("/view_region/<region_id>")
-def view_region(region_id):
-    regions = list(mongo.db.regions.find({"_id": ObjectId(region_id)}))
-    return render_template("regions.html", regions=regions)
+# ------------------LOG OUT-------------------
+@app.route("/logout")
+def logout():
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
-# ADDED BY ME
-@app.route("/added_by_me/<username>")
-def added_by_me(username):
-    recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
-    return render_template("profile.html", username=session["user"],
-                           recipes=recipes)
+# ------------------REGISTER-------------------
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("This username already exists. Try again.")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        session["user"] = request.form.get("username").lower()
+        return redirect(url_for("profile", username=session["user"]))
+
+    return render_template("register.html")
 
 
-# WINE
-@app.route("/wine")
-def wine():
-    return render_template("wine.html")
-
-
+# ------------------MAIN-------------------
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

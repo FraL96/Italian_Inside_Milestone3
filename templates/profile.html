@@ -34,26 +34,59 @@
 </div>
 
 <!-- view my recipes -->
+
 <div class="row">
     <div class="col s12 m6">
-        <ul class="collection with-header">
-            <!-- header -->
-            <li class="collection-header white-text red darken-4 text-shadow byme center-align">
-                <h4>Added by me</h4>
+        <h5 class="card-panel black-text red darken-4 byme center-align custom">Added by me</h5>
+        <ul class="collapsible">
+            {% for recipe in user_recipes %}
+            <li>
+                <div class="collapsible-header red darken-4">
+                    <div class="col s2">
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <div class="col s12 m4 white-text">
+                        <h6>{{ recipe.recipe_name }}</h6>
+                    </div>
+                    <div class="col s5">
+                        <!-- Delete button -->
+                        <a class="modal-trigger edit-delete right" href="#modal{{ loop.index }}"><i
+                                class="fas fa-trash-alt white-text"></i></a>
+
+                        <div id="modal{{ loop.index }}" class="modal white-text">
+                            <div class="modal-content">
+                                <h4>Are you sure you want to delete {{ recipe.recipe_name }}?</h4>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="modal-close green-text btn-flat">Cancel</a>
+                                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}"
+                                    class="modal-close red-text lighten-3 btn-flat">Delete</a>
+                            </div>
+                        </div>
+                        <!-- Edit button -->
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="edit-delete right"><i
+                                class="fas fa-edit white-text"></i></a>
+                    </div>
+                </div>
+                <!-- Recipe in short -->
+                <div class="collapsible-body">
+                    <h6><a class="red-text right" href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">SEE
+                            RECIPE</a>
+                    </h6>
+                    <h6><b>Region:</b> {{ recipe.region }}</h6>
+                    <h6><b>Category:</b> {{ recipe.category }}</h6>
+                    <h6><b>Option:</b> {{ recipe.option }}</h6>
+                    <h6><b>Difficulty:</b> {{ recipe.difficulty }}</h6>
+                    <h6><b>Servings:</b> {{ recipe.quantity }}</h6>
+                    <h6><b>Ingredients:</b> {{ recipe.ingredients }}</h6>
+                    <h6><b>Wine pairing:</b> {{ recipe.wine_pairing}}</h6>
+                    <h6><b>Preparation:</b> {{ recipe.preparation}}</h6>
+                    <h6><b>Author:</b> {{ recipe.created_by}}</h6>
+                </div>
             </li>
-            {% for recipe in recipes %}
-            <div class="col s3">
-                {% if session.user|lower == recipe.created_by %}
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn-small red accent-4">Delete</a>
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn-small green accent-4">Edit</a>
-                {% endif %}
-            </div>
-            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
-                class="collection-item center-align">{{ recipe.recipe_name }}</a>
             {% endfor %}
         </ul>
     </div>
-</div>
 
 
-{% endblock %}
+    {% endblock %}

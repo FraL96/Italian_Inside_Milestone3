@@ -6,6 +6,20 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+.edit-delete {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.modal {
+    background-color: rgb(145, 22, 22);
+}
+
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
 h4 {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
@@ -39,6 +53,7 @@ h4 {
 
 .nice {
     font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
 }
 
 .italic {
@@ -72,11 +87,10 @@ nav ul a {
 }
 
 .byme {
-    font-size: smaller;
+    font-size: x-large;
     font-family: 'Playfair Display', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-style: italic;
-
 }
 
 .phone-friendly {
