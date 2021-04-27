@@ -16,6 +16,34 @@
     background-color: rgb(145, 22, 22);
 }
 
+.border {
+    border: solid black 5px;
+    padding: 0%;
+    margin: 0%;
+}
+
+.pasta {
+    background-image: url("https://images.pexels.com/photos/6103858/pexels-photo-6103858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.meat {
+    background-image: url("https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+}
+
+.fish {
+    background-image: url("https://images.pexels.com/photos/2042591/pexels-photo-2042591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.pizza {
+    background-image: url("https://images.pexels.com/photos/4109083/pexels-photo-4109083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.desserts {
+    background-image: url("https://images.pexels.com/photos/6210804/pexels-photo-6210804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+}
+
 h6 {
     font-family: 'Roboto', sans-serif;
 }

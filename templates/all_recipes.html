@@ -32,11 +32,30 @@
 <div class="row recipes">
     <div class="col s12 m8 offset-m2">
 
-        <ul class="collection with-header">
+        <ul class="collection with-header border">
             {% for category in categories %}
-            <li class="collection-header white-text red darken-4 text-shadow categ center-align">
+            {% if category.category_name == "Pasta" %}
+            <li class="collection-header white-text text-shadow categ center-align pasta">
                 <h4>{{ category.category_name }}</h4>
             </li>
+            {% elif category.category_name == "Meat" %}
+            <li class="collection-header white-text  text-shadow categ center-align meat">
+                <h4>{{ category.category_name }}</h4>
+            </li>
+            {% elif category.category_name == "Fish" %}
+            <li class="collection-header white-text  text-shadow categ center-align fish">
+                <h4>{{ category.category_name }}</h4>
+            </li>
+            {% elif category.category_name == "Pizza" %}
+            <li class="collection-header white-text  text-shadow categ center-align pizza">
+                <h4>{{ category.category_name }}</h4>
+            </li>
+            {% elif category.category_name == "Desserts" %}
+            <li class="collection-header white-text  text-shadow categ center-align desserts">
+                <h4>{{ category.category_name }}</h4>
+            </li>
+
+            {% endif %}
 
             {% for recipe in recipes %}
             {% if recipe.category == category.category_name %}
