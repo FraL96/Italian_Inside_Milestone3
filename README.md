@@ -42,6 +42,14 @@ Click [here]() to have a look at Italian Inside.
 
 # 1. User Experience
 ## Project goals
+
+This project is being submitted as the third Milestone Project in partial fulfillment of the Full Stack Developement Program at Code Institute.
+The project has the goal to demonstrate my knowledge on front-end and back-end developement. Moreover it demostrates my knowledge of the CRUD functionality - Create, Read, Update and Delete.
+The technologies required to be used are HTML, CSS, JS, Python, Flask and Mongo DB.
+
+The website I decided to create is targeting all the users that enjoy cooking or have interest in that field. This application provides a service to both Non-Italian users (that can browse between authentic Italian recipes) and Italian users (that can spread their knowledge about Italian cuisine and learn about recipes from regions other than the one they belong to).
+Italian Inside also provides a service to me, the developer, because it advertises the wines from the company "Casale del Giglio" abroad. The developer could recive, for example, a percentage for every bottle bought by Italian Inside users.
+
 ## User Stories
 ## Design
 ## Use of Database
