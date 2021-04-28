@@ -206,6 +206,7 @@ The menu will then scroll out from the right side.
 * Footer
 
 The footer includes an invitation to join the website and to contact us for any kind of communication. The email address inclued a link so by clicking it, it will open a new email with the "To:" already filled in.
+It also includes the links to [Facebook](), [Instagram]() and [YouTube]().
 
 * Homepage
 
@@ -258,6 +259,28 @@ In the future I would like to add to Italian Inside:
 - Add a map that shows from in the world are people using Italian Inside in order to show from where people are preparing and sharing their italian recipes.
 
 # 3. Technologies Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) - Used to create the structure of the website.
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Used to style the website.
+* [JQuery](https://jquery.com/) - Used to add interactive features to the website.
+* [Python3]() - Used to create the backend of the website.
+* [Flask]() - Used to add libraries and features to Python.
+* [MongoDB]() - Used to host the collections of my database.
+* [Heroku]() - Used to deploy my website.
+* [Balsamiq](https://balsamiq.com/) - Used to design the Wireframes.
+* [Gitpod](https://www.gitpod.io/) - Used to design and host the project.
+* [GitHub](https://github.com/) - Used to hold the repository.
+* [Materialize]() - Used to add functions and elements.
+* [Google fonts](https://fonts.google.com/) - Used to add fonts to the website.
+* [AmIResponsive](http://ami.responsivedesign.is/#) - Used for the READ ME cover picture.
+* [Fontawesome](https://fontawesome.com/v4.7.0/) - used for the icons.
+* [Jinja]() - Used to include database information in my website.
+* [Werkzeug]() - Used to hash and authenicate the passwords.
+* [PEP8]() - Used to maintain a proper style in the Python code.
+* [Chrome DevTools]() - Used to test responsiveness and identify bugs.
+* [Autoprefixer]() - Used to parse my CSS code.
+* [W3C Markup Validation Service]() - Used to identify errors in the HTML code
+* [W3C CSS Validator]() - Used to identify errors in the CSS code
 
 # 4.Testing
 
