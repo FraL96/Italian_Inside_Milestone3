@@ -346,3 +346,5 @@ To Declan Moore for introducing me to Code Institute and giving me the opportuni
 And last but not least, to my partner, [Cathal Moore](), that always believes in me and pushes me to become the best version of myself.
 
 # 8. Disclaimer
+This project is been created solely for educational purposes.
+For question or problems with content and/or copyright, please contact me at the following e-mail address: francesca_lupu@live.it .
