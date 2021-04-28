@@ -108,6 +108,7 @@ nav ul a {
 }
 
 .custom {
+    background: -o-radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
     background: radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
 }
 
@@ -183,6 +184,8 @@ path.selected {
 }
 
 .regione {
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
 }
 

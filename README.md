@@ -28,7 +28,23 @@ Click [here]() to have a look at Italian Inside.
 1. [User Experience](#User-Experience)
     - [Project Goals](#Project-Goals)
     - [User Stories](#User-Stories)
+        - [Website]()
+        - [Homepage]()
+        - [Regions]()
+        - [All Recipes]()
+        - [Recipe View]()
+        - [Wine Company]()
+        - [Login / Registration]()
+        - [Profile]()
     - [Design](#Design)
+        - [Color Use]()
+        - [Fonts]()
+        - [Media]()
+            - [Icons]()
+            - [Images]()
+            - [Graphic Elements]()
+        - [Defensive Design]()
+        - [Navigation]()
     - [Use of Database](#Use-of-Database)
     - [Wireframes](#Wireframes)
 2. [Features](#Features)
@@ -41,7 +57,7 @@ Click [here]() to have a look at Italian Inside.
 7. [Acknowledgements](#Acknowledgements)
 
 # 1. User Experience
-## Project goals
+## Project Goals
 
 This project is being submitted as the third Milestone Project in partial fulfillment of the Full Stack Developement Program at Code Institute.
 The project has the goal to demonstrate my knowledge on front-end and back-end developement. Moreover it demostrates my knowledge of the CRUD functionality - Create, Read, Update and Delete.
@@ -51,15 +67,138 @@ The website I decided to create is targeting all the users that enjoy cooking or
 Italian Inside also provides a service to me, the developer, because it advertises the wines from the company "Casale del Giglio" abroad. The developer could recive, for example, a percentage for every bottle bought by Italian Inside users.
 
 ## User Stories
+
+### Website
+
+* As a website owner I want to create a website where users will be able to both find and share traditional Italian recipes.
+* As a website owner I want to collaborate with a wine company so I can advertise their products on my website.
+
+* As a user (not Italian) I want to be able to consult the website and find traditional Italian recipes so I can try to make them at home.
+* As a user (Italian) I would like to share some traditional but not very known recipes of my region and learn about recipes from other regions.
+
+### Homepage
+
+* As a website owner I want to make it easy for people to consult my website so I will give them the possibility to click on a region in the map to view the recipes of that area.
+
+* As a user, if I want to view the recipes of a specific region I can just click on it.
+
+* As a website owner I want people to easily navigate, that’s why I will provide on every page a navigation bar and a footer with all the links to the pages.
+
+* As a user I want to be able to easily access all pages of the website.
+
+### Regions
+
+* As a website owner I will display my recipes divided by regions so the users will know where that dish belongs to.
+
+* As a user I want to see where a recipe was created so that I can also learn something about Italy.
+
+### All Recipes
+
+* As a website owner, in this page I will divide all recipes by type to adapt to the different needs and desires of the users.
+
+* As a user, if for example I am looking for a dessert, I want to go on the “All recipes” page and find the “Dessert” section.
+
+* As a website owner, I want the users to be able to find recipes easily; that is why I will add a search bar.
+
+* As a user, if I am looking for a specific recipe I want to be able to find it by just typing its name in the search bar.
+
+### Recipe View
+
+* As a website owner I will display in the recipe page technical information about the recipe (type, difficulty, servings, ingredients) and how to prepare it step by step.
+
+* As a user when I click on a recipe I want to find all the information I need to understand what kind of recipe it is and how to prepare it.
+
+### Wine Company
+
+*	As a web owner, I also want to make some profit, so I am collaborating with a wine company and advertising their wines on my website by pairing them with the recipes.
+
+*	As a user, I want to know what is the best wine to pair with a recipe and buy a bottle of it.
+
+### Login / Registration
+
+*	As a website owner I want to allow people to have a personal profile so they can add or modify recipes besides viewing them.
+
+*	As a user I want to have my personal access to the website so I can share my recipes with the other users.
+
+### Profile
+
+*	As a website user, in this page I will display for the user the list of the recipes they added and possibility to add more, modify or delete them.
+
+*	As a user, I want to be able to review the recipes I uploaded, manage them and add more.
+
 ## Design
+
+### Color Use
+The entire website uses red as the main color. This is been chosen because red is often associated by the mind to food, as for example green to nature.
+By browing the website is easily noticible that more shades of red have been used.
+The red scheme is being balanced by the use of black (for the text) and white (for the text and the background).
+
+[alt](red)
+
+[alt](black and white)
+
+### Fonts
+The main fonts used are Playfair Display and Roboto with a fallback of sans-serif. These fonts have been taken from [Google Fonts]().
+I selected these fonts as, in my opinion, Playfair Display give an elegant and antique look to the website, this is why it is being used for the main titles and given them a bigger size.
+Roboto instead, is easier to read and I prefered to use this font for those information that I want to be clear, like the steps of a recipe.
+In some occasion, both fonts are using a **bold** or *italic* style to accentuate some words or to give some movement to a plain text.
+
+### Media
+
+#### Icons
+The icons used in this website are all taken from [Font Awesome]() and are used to improve the communication or to beautify a button or a tab.
+
+#### Images
+The images used are taken from different sources:
+* The ones used for the regions pages, the categories in the "All recipes" pages and some of the recipes pictures, are taken from [Pexels.com](), that provides images without copyright.
+* The shortcut icon representing a slice of pizza is been taken from [Favicon.io]().
+* The picture with the logo of ["Casale del Giglio"]() is been taken from their website.
+* The pictures used for the recipes, some have been taken by me and some have been sent to me by a friend that is a chef and took them personally.
+
+#### Graphic elements
+The code for the interactive map used on the homepage is been realized by [Antonio Del Cin]() and then customized by me.
+
+### Defensive Design
+In order to avoid the misuse of the website and its forms, some defensive mechanisms have been used:
+* The login and register pages have a custom pattern applied to the username and the password field.
+The username have to be between 3 and 20 characters and contain lowercase, uppercase or numbers.
+Moreover it has to be unique.
+The password instead, have to be between 5 and 20 characters and contain at least a digit, a special character, a lower case and an upper case letter.
+
+* The form in the add and edit pages also include specific patterns in their fields:
+The name of the recipe has to be between 3 and 50 characters, only letters and numbers.
+The URL to include a picture has to start with "http://" or "https://" and be between 6 and 900 characters.
+The number of servings input has to be maximum 2 characters long and include just numbers.
+The name of the wine to pair with the dish has to be between 5 and 50 characters.
+The ingredients have to be between 5 and 1000 characters; the user is also asked to write every ingredient on a different line.
+The steps to realize the recipe have to be at least 5 characters long and the user is required to write every step on a new line.
+All fields are required.
+
+* When trying to delete a recipe (by clicking on the button with the bin icon in the Profile page), the user will trigger a modal that will ask the user again if he/she really wants to delete that recipe.
+
+### Navigation
+Is really important for the website to be user friendly and to help them access the page they are looking for within between maimum 5 clicks.
+Below you can find the sitemap of Italian Inside.
+
+[sitemap]()
+
 ## Use of Database
+For this project I decided to use Mongo DB as database. Below you can find the structure of my six collections:
+[database]()
+
 ## Wireframes
+My wireframes have been created with Balsamiq. Click on the links below to view them.
+
+* [Desktop]()
+* [Tablet]()
+* [Mobile]()
 
 # 2. Features
 ## Existing Features
-## Future Features
 
 # 3. Technologies Used
+
+
 
 # 4.Testing
 
