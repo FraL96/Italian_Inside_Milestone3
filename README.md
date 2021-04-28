@@ -28,23 +28,22 @@ Click [here]() to have a look at Italian Inside.
 1. [User Experience](#User-Experience)
     - [Project Goals](#Project-Goals)
     - [User Stories](#User-Stories)
-        - [Website]()
-        - [Homepage]()
-        - [Regions]()
-        - [All Recipes]()
-        - [Recipe View]()
-        - [Wine Company]()
-        - [Login / Registration]()
-        - [Profile]()
+        - [Website](#Website)
+        - [Homepage](#Homepage)
+        - [Regions](#Regions)
+        - [All Recipes](#All-Recipes)
+        - [Recipe View](#Recipe-View)
+        - [Wine Company](#Wine-Company)
+        - [Login / Registration](#Login/Registration)
+        - [Profile](#Profile)
     - [Design](#Design)
-        - [Color Use]()
-        - [Fonts]()
-        - [Media]()
-            - [Icons]()
-            - [Images]()
-            - [Graphic Elements]()
-        - [Defensive Design]()
-        - [Navigation]()
+        - [Color Use](#Color-Use)
+        - [Fonts](#Fonts)
+        - [Icons](#Icons)
+        - [Images](#Images)
+        - [Graphic Elements](#Graphic-Elements)
+        - [Defensive Design](#Defensive-Design)
+        - [Navigation](#Navigation)
     - [Use of Database](#Use-of-Database)
     - [Wireframes](#Wireframes)
 2. [Features](#Features)
@@ -54,12 +53,14 @@ Click [here]() to have a look at Italian Inside.
 4. [Testing](#Testing)
 5. [Deployment](#Deployment)
 6. [Credits](#Credits)
-    - [Content]()
-    - [Media]()
-    - [Code]()
+    - [Content](#Content)
+    - [Media](#Media)
+    - [Code](#Code)
 7. [Acknowledgements](#Acknowledgements)
+8. [Disclaimer](#Disclaimer)
 
 # 1. User Experience
+
 ## Project Goals
 
 This project is being submitted as the third Milestone Project in partial fulfillment of the Full Stack Developement Program at Code Institute.
@@ -132,6 +133,7 @@ Italian Inside also provides a service to me, the developer, because it advertis
 ## Design
 
 ### Color Use
+
 The entire website uses red as the main color. This is been chosen because red is often associated by the mind to food, as for example green to nature.
 By browing the website is easily noticible that more shades of red have been used.
 The red scheme is being balanced by the use of black (for the text) and white (for the text and the background).
@@ -141,27 +143,30 @@ The red scheme is being balanced by the use of black (for the text) and white (f
 [alt](black and white)
 
 ### Fonts
+
 The main fonts used are Playfair Display and Roboto with a fallback of sans-serif. These fonts have been taken from [Google Fonts]().
 I selected these fonts as, in my opinion, Playfair Display give an elegant and antique look to the website, this is why it is being used for the main titles and given them a bigger size.
 Roboto instead, is easier to read and I prefered to use this font for those information that I want to be clear, like the steps of a recipe.
 In some occasion, both fonts are using a **bold** or *italic* style to accentuate some words or to give some movement to a plain text.
 
-### Media
+### Icons
 
-#### Icons
 The icons used in this website are all taken from [Font Awesome]() and are used to improve the communication or to beautify a button or a tab.
 
-#### Images
+### Images
+
 The images used are taken from different sources:
 * The ones used for the regions pages, the categories in the "All recipes" pages and some of the recipes pictures, are taken from [Pexels.com](), that provides images without copyright.
 * The shortcut icon representing a slice of pizza is been taken from [Favicon.io]().
 * The picture with the logo of ["Casale del Giglio"]() is been taken from their website.
 * The pictures used for the recipes, some have been taken by me and some have been sent to me by a friend that is a chef and took them personally.
 
-#### Graphic elements
+### Graphic Elements
+
 The code for the interactive map used on the homepage is been realized by [Antonio Del Cin]() and then customized by me.
 
 ### Defensive Design
+
 In order to avoid the misuse of the website and its forms, some defensive mechanisms have been used:
 * The login and register pages have a custom pattern applied to the username and the password field.
 The username have to be between 3 and 20 characters and contain lowercase, uppercase or numbers.
@@ -180,16 +185,19 @@ All fields are required.
 * When trying to delete a recipe (by clicking on the button with the bin icon in the Profile page), the user will trigger a modal that will ask the user again if he/she really wants to delete that recipe.
 
 ### Navigation
+
 Is really important for the website to be user friendly and to help them access the page they are looking for within between maimum 5 clicks.
 Below you can find the sitemap of Italian Inside.
 
 [sitemap]()
 
 ## Use of Database
+
 For this project I decided to use Mongo DB as database. Below you can find the structure of my six collections:
 [database]()
 
 ## Wireframes
+
 My wireframes have been created with Balsamiq. Click on the links below to view them.
 
 * [Desktop]()
@@ -197,6 +205,7 @@ My wireframes have been created with Balsamiq. Click on the links below to view 
 * [Mobile]()
 
 # 2. Features
+
 ## Existing Features
 
 * Navigation bar
@@ -206,6 +215,7 @@ Moreover, the logo is also a link to the homepage.
 
 In the mobile view, the menu can be accessed by clicking on hamburger icon on the top right corner that acts as a hamburger button.
 The menu will then scroll out from the right side.
+
 * Footer
 
 The footer includes an invitation to join the website and to contact us for any kind of communication. The email address inclued a link so by clicking it, it will open a new email with the "To:" already filled in.
@@ -320,23 +330,28 @@ How to deploy this project - with Heroku:
 10. The website is now successfully deployed and you can view it by clicking on "Open app".
 
 # 6. Credits
+
 ## Content
+
 The website is created by me. Some features like the user authentification are inspired to the [Task Manager]() project by Code Institute.
 The recipes are from [Giallo Zafferano]() and where adapted for Italian Inside.
 I chose the wine company, Casale del Giglio, to be sponsored on the website because one of my high school professors works in that company and I often seen and heard about their wines.
 
 ## Media
+
 The logo of Italian Inside is been created by me on [Canva]().
 The shortcut icon is been taken from [Favicon.io]().
 The pictures of the categories and the ones used for the regions have been found on [Pexels.com]().
 The pictures of the recipes, some are mine, of dishes that I made. Some have been taken from Pexels. Some others have been supplied by my friend [Giacomo]().
 
 ## Code
+
 The graphic element of the map of Italy is been created by [Antonio Dal Cin]().
 Some code snippets like the regEx pattern have been taken from [StackOverflow]().
 Information on CSS functions have been taken from [W3School]().
 
 # 7. Acknowledgements
+
 I want to thank you some people that made the difference and helped me in completing this project.
 First of all to my mentor [Precious Ijege]() for supporting me in this project and giving me great advices.
 To [Code Institute]() for all the things they taught me.
@@ -348,3 +363,5 @@ And last but not least, to my partner, [Cathal Moore](), that always believes in
 # 8. Disclaimer
 This project is been created solely for educational purposes.
 For question or problems with content and/or copyright, please contact me at the following e-mail address: francesca_lupu@live.it .
+
+[Go back to the top]()
