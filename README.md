@@ -196,9 +196,68 @@ My wireframes have been created with Balsamiq. Click on the links below to view 
 # 2. Features
 ## Existing Features
 
+* Navigation bar
+
+From the navigation, the user can access to all main pages.
+Moreover, the logo is also a link to the homepage.
+
+In the mobile view, the menu can be accessed by clicking on hamburger icon on the top right corner that acts as a hamburger button.
+The menu will then scroll out from the right side.
+* Footer
+
+The footer includes an invitation to join the website and to contact us for any kind of communication. The email address inclued a link so by clicking it, it will open a new email with the "To:" already filled in.
+
+* Homepage
+
+The homepage includes an introduction to the website and an interactive map. By clicking on a region, the page of the selected region will open.
+
+* Region
+
+The region page includes an image of the region, a little list with the most famous products of the region and a list with the recipe of that region.
+
+* All recipes
+
+This section contains a search bar to allow the user to search for a recipe by just typing it in.
+It also contains a list of all the recipes divided by category.
+Next to each recipe there will be an icon showing if that recipe contains meat, fish or if is vegetarian.
+
+* Recipe
+
+The recipe view displays the title with a picture an a few information about the recipe, like servings, difficulty level and ingredients.
+Underneath the preparation of the recipe is displayed step by step.
+
+* Casale del Giglio
+
+In this page, there is a little explaination about the wine company. Moreover there is also a button linked to the website of the company.
+
+* Profile
+
+This page is accessible only after having registered or logged in. In this section the user will be able to add new recipes by clicking on the button.
+He/she will also be able to review the added recipes, edit or delete them.
+
+* Add/Edit recipe
+
+In the add page, a logged in user will have the possibility to fill up the form and add a new recipe to the website.
+The edit form will be really similar but the fields will already contain the information of the recipe that the user would like to modify. Once modified, the user will have the possibility to save the changes or cancel them and go back to the previous version of the recipe.
+
+* Log In / Registration
+
+In the registration page, the user will be able to create a username and a password to access the profile page. The error handlers underneath the fields will help the user to create a valid username and password.
+A flash message will show up if the user is already existent.
+In the log in page, the registered user will be able to log in by filling up his/her username and password.
+A flash message will appear if the username or password are incorrect.
+
+## Future Features
+
+In the future I would like to add to Italian Inside:
+- The possibility for users to upload their picture of the recipe once they prepared it at home.
+- The possibility for users to comment under the recipes and add their opinions or advices for other users
+- The user will recive an email after they register with a welcoming message and their log in credentials.
+- Add videos of the preparation of the recipes
+- Create real pages on social medias and advertise the website by teaching a few words in italian or sharing fun facts.
+- Add a map that shows from in the world are people using Italian Inside in order to show from where people are preparing and sharing their italian recipes.
+
 # 3. Technologies Used
-
-
 
 # 4.Testing
 
