@@ -329,7 +329,7 @@ I chose the wine company, Casale del Giglio, to be sponsored on the website beca
 The logo of Italian Inside is been created by me on [Canva]().
 The shortcut icon is been taken from [Favicon.io]().
 The pictures of the categories and the ones used for the regions have been found on [Pexels.com]().
-The pictures of the recipes, some are mine, of dishes that I made. Some have been supplied by my friend [Giacomo]().
+The pictures of the recipes, some are mine, of dishes that I made. Some have been taken from Pexels. Some others have been supplied by my friend [Giacomo]().
 
 ## Code
 The graphic element of the map of Italy is been created by [Antonio Dal Cin]().
@@ -337,5 +337,12 @@ Some code snippets like the regEx pattern have been taken from [StackOverflow]()
 Information on CSS functions have been taken from [W3School]().
 
 # 7. Acknowledgements
+I want to thank you some people that made the difference and helped me in completing this project.
+First of all to my mentor [Precious Ijege]() for supporting me in this project and giving me great advices.
+To [Code Institute]() for all the things they taught me.
+To my friend [Giacomo]() for realizing some dishes in the last week before my submission so I can have the pictures.
+To my parents, Monica and Gabriel Lupu that never stop sustaining me.
+To Declan Moore for introducing me to Code Institute and giving me the opportunity to start creating a new career.
+And last but not least, to my partner, [Cathal Moore](), that always believes in me and pushes me to become the best version of myself.
 
 # 8. Disclaimer
