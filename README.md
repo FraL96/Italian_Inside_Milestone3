@@ -54,6 +54,9 @@ Click [here]() to have a look at Italian Inside.
 4. [Testing](#Testing)
 5. [Deployment](#Deployment)
 6. [Credits](#Credits)
+    - [Content]()
+    - [Media]()
+    - [Code]()
 7. [Acknowledgements](#Acknowledgements)
 
 # 1. User Experience
@@ -286,6 +289,53 @@ In the future I would like to add to Italian Inside:
 
 # 5. Deployment
 
+How to clone this project:
+
+1. Log In into GitHub and access the repository [FraL96/Italian_Inside_Milestone3]().
+2. Click on the "Code" button (near the green "GitPod" one).
+3. Copy the URL.
+4. Open Gitbash from your computer.
+5. Type "git clone", paste the URL and press "enter".
+6. You will find the folder will all the files in your computer.
+
+How to run the code locally:
+
+1. Create the required databases. You can do this by accessing Mongo DB. Create a cluster and then create the required collections (as seen in [Use of Database]()). Don't forget to add the value to every key.
+2. Go to GitPod and install the requirements by typing the following in the terminal: pip3 install -r requirements.txt .
+3. Add the secret environment variables: create a .gitignore file; then create a env.py file and add it to the .gitignore . In the env.py add the following environment variables:
+[picture]()
+4. At this point you can go back to the terminal and type "python3 app.py" to open the preview of the website.
+
+How to deploy this project - with Heroku:
+
+1. From the terminal: type "pip3 freeze --local > requirements.txt" to update the list of requirements needed to run this application.
+2. Type " echo web: python app.py > Procfile " to create the Procfile.
+3. Go to Heroku and if you don't have it create an account.
+4. Click on "New" on the top right corner and select "Create new app". In the modal, add a name and select the region, then click "Create app".
+5. The way I decided to use is via GitHub. To select this method click on "connect to GitHub" and select the right repository. Click on connect.
+6. Before selecting "Enable Automatic Deploys" go to the setting!
+7. The environment variables are hidden so we will have to write them manually. Do do this, from settings click on "Reveal config vars" and insert your variables.
+8. Go back to the terminal in GitPod and push both the requirements.txt and the Procfile one at the time, with their respective commits.
+9. We can now go back to Heroku and click on "Enable Automatic Deployment". Next click on "Deploy Branch".
+10. The website is now successfully deployed and you can view it by clicking on "Open app".
+
 # 6. Credits
+## Content
+The website is created by me. Some features like the user authentification are inspired to the [Task Manager]() project by Code Institute.
+The recipes are from [Giallo Zafferano]() and where adapted for Italian Inside.
+I chose the wine company, Casale del Giglio, to be sponsored on the website because one of my high school professors works in that company and I often seen and heard about their wines.
+
+## Media
+The logo of Italian Inside is been created by me on [Canva]().
+The shortcut icon is been taken from [Favicon.io]().
+The pictures of the categories and the ones used for the regions have been found on [Pexels.com]().
+The pictures of the recipes, some are mine, of dishes that I made. Some have been supplied by my friend [Giacomo]().
+
+## Code
+The graphic element of the map of Italy is been created by [Antonio Dal Cin]().
+Some code snippets like the regEx pattern have been taken from [StackOverflow]().
+Information on CSS functions have been taken from [W3School]().
 
 # 7. Acknowledgements
+
+# 8. Disclaimer
