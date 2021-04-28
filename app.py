@@ -36,6 +36,7 @@ def view_region(region_id):
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     categories = list(mongo.db.categories.find())
+
     return render_template("all_recipes.html",
                            recipes=recipes, categories=categories)
 
