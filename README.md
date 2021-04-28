@@ -1,45 +1,62 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Italian Inside</h1>
+<h2 align="center">Bite it - Taste it - Love it</h2>
 
-Welcome FraL96,
+![alt](image)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+The Coronavirus pandemic, kept us all in our houses for more than a year.
+Many people had to find a way to cope with this new reality.
+Someone found a new hobby, others started to study a new language and still others decided to make plans for the future.
+I, honestly, did all of them, but something that many of the people I know did, is cooking; to experiment with new recipes and organize theme dinners with their household.
 
-## Gitpod Reminders
+While [Googleing]() new recipes I discovered how difficult it is to find an authentic recipe. Many are just Americanized versions of the genuine one with extra fats and less flavours.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+A *cuisine* lover like me could not accept this so I decided to make my little part to change this.
 
-`python3 -m http.server`
+I don't know much about other contries but I know a lot about Italy; that is how *Italian Inside* was born.
 
-A blue button should appear to click: _Make Public_,
+Italian Inside targets two main groups:
 
-Another blue button should appear to click: _Open Browser_.
+* Non-Italian people - To give them a place where to find authentic Italian recipes.
+* Italian people - To give them the possibility to share their most precious recipes with the world.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Click [here]() to have a look at Italian Inside.
 
 ---
 
-Happy coding!
+# Table of contents
+
+1. [User Experience](#User-Experience)
+    - [Project Goals](#Project-Goals)
+    - [User Stories](#User-Stories)
+    - [Design](#Design)
+    - [Use of Database](#Use-of-Database)
+    - [Wireframes](#Wireframes)
+2. [Features](#Features)
+    - [Existing Features](#Existing-Features)
+    - [Future Features](#Future-Features)
+3. [Technologies Used](#Technologies-Used)
+4. [Testing](#Testing)
+5. [Deployment](#Deployment)
+6. [Credits](#Credits)
+7. [Acknowledgements](#Acknowledgements)
+
+# 1. User Experience
+## Project goals
+## User Stories
+## Design
+## Use of Database
+## Wireframes
+
+# 2. Features
+## Existing Features
+## Future Features
+
+# 3. Technologies Used
+
+# 4.Testing
+
+# 5. Deployment
+
+# 6. Credits
+
+# 7. Acknowledgements
