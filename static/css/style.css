@@ -6,52 +6,6 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.edit-delete {
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-.modal {
-    background-color: rgb(145, 22, 22);
-}
-
-.border {
-    border: solid black 5px;
-}
-
-.pasta {
-    background-image: url("https://images.pexels.com/photos/6103858/pexels-photo-6103858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
-
-.meat {
-    background-image: url("https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-position: center;
-}
-
-.fish {
-    background-image: url("https://images.pexels.com/photos/2042591/pexels-photo-2042591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
-
-.pizza {
-    background-image: url("https://images.pexels.com/photos/4109083/pexels-photo-4109083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
-
-.desserts {
-    background-image: url("https://cdn.pixabay.com/photo/2020/01/05/07/15/colorful-4742428_1280.jpg");
-    background-position: center;
-}
-
-h6 {
-    font-family: 'Roboto', sans-serif;
-}
-
-h4 {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
 .join {
     font-family: 'Playfair Display', sans-serif;
     font-style: italic;
@@ -60,33 +14,6 @@ h4 {
     border: 20px;
     color: red;
     background-color: #fff;
-}
-
-.background {
-    background-image: url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 700px;
-    width: auto;
-}
-
-.social-icons {
-    margin-left: 15px;
-    font-size: 18px;
-}
-
-.nice {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-}
-
-.italic {
-    font-style: italic;
-}
-
-nav ul a {
-    font-size: large;
 }
 
 .pic {
@@ -102,67 +29,24 @@ nav ul a {
     display: inline;
 }
 
-.logo {
-    z-index: 900;
-    position: relative;
-}
-
-.custom {
-    background: -o-radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
-    background: radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
-}
-
-.byme {
-    font-size: x-large;
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.phone-friendly {
-    font-family: 'Playfair Display', sans-serif;
-    font-style: italic;
-    margin-top: 50px;
-}
-
 .round-button {
     border-radius: 50%;
 }
 
-.sidenav li>a {
-    font-size: medium;
+.space {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    text-align: left;
 }
 
-.titles {
-    margin-top: 150px;
-    margin-bottom: 30px;
+.small-ones {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
-    font-style: italic;
 }
 
-.categ {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.collection a.collection-item {
-    color: black;
-    background-color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    margin: 5px;
-    line-height: 42px;
-}
-
-#footer {
-    position: absolute;
-    background-color: #d32f2f;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    /* Footer height */
+.image {
+    border: solid black 5px;
 }
 
 #page-container {
@@ -172,21 +56,24 @@ nav ul a {
 
 #content-wrap {
     padding-bottom: 2.5rem;
-    /* Footer height */
 }
 
-path:hover {
-    fill: #fff;
+h6 {
+    font-family: 'Roboto', sans-serif;
 }
 
-path.selected {
-    fill: #fff !important;
+h4 {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    font-style: italic;
 }
 
-.regione {
-    -webkit-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+.titles {
+    margin-top: 150px;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    font-style: italic;
 }
 
 h5 {
@@ -224,10 +111,63 @@ p {
     margin-top: 0px;
 }
 
+.logo {
+    width: 100px;
+}
+
 .box {
     width: 100%;
     margin: 0;
+    z-index: 900;
+    position: relative;
 }
+
+.nice {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.custom {
+    background: -o-radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
+    background: radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
+}
+
+/*-- navbar --*/
+
+header {
+    z-index: 50;
+    position: relative;
+}
+
+.phone-friendly {
+    font-family: 'Playfair Display', sans-serif;
+    font-style: italic;
+    margin-top: 50px;
+}
+
+.nav-wrapper {
+    z-index: 900;
+    position: relative;
+}
+
+.sidenav li>a {
+    font-size: medium;
+}
+
+nav ul a {
+    font-size: large;
+}
+
+.logo {
+    z-index: 900;
+    position: relative;
+}
+
+/*-- footer --*/
 
 .social-links a i {
     color: white;
@@ -236,9 +176,33 @@ p {
     margin-top: 5px;
 }
 
-.wine {
-    width: 500px;
-    height: auto;
+.social-icons {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+#footer {
+    position: absolute;
+    background-color: #d32f2f;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+/*-- home --*/
+
+path:hover {
+    fill: #fff;
+}
+
+path.selected {
+    fill: #fff !important;
+}
+
+.regione {
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .instructions {
@@ -250,46 +214,105 @@ p {
     line-height: 1.6;
 }
 
-.logo {
-    width: 100px;
-}
-
-.space {
-    margin-top: 100px;
-    margin-bottom: 20px;
-    font-size: 50px;
-    text-align: left;
-}
-
 .italia {
     height: inherit;
     width: inherit;
     text-align: center;
     margin-top: 20px;
+    z-index: 1;
+    position: relative;
 }
 
-.small-ones {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-}
+/*-- recipes --*/
 
 .search-bar {
     margin-left: -15px;
     margin-right: -15px;
 }
 
-.wine {
-    background: url('https://res.cloudinary.com/cookbookii/image/upload/v1619284043/grapes-553463_1280_jdlwuq.jpg') no-repeat center fixed;
-    background-size: cover;
+.categ {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
-.image {
+.collection a.collection-item {
+    color: black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin: 5px;
+    line-height: 42px;
+}
+
+.border {
     border: solid black 5px;
 }
 
-/*-----------------|TABLET|----------------*/
+.pasta {
+    background-image: url("https://images.pexels.com/photos/6103858/pexels-photo-6103858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
 
-@media (min-width: 550px) {}
+.meat {
+    background-image: url("https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+}
+
+.fish {
+    background-image: url("https://images.pexels.com/photos/2042591/pexels-photo-2042591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.pizza {
+    background-image: url("https://images.pexels.com/photos/4109083/pexels-photo-4109083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.desserts {
+    background-image: url("https://cdn.pixabay.com/photo/2020/01/05/07/15/colorful-4742428_1280.jpg");
+    background-position: center;
+}
+
+/*-- recipe view --*/
+
+/*-- wine --*/
+
+.background {
+    background-image: url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: auto;
+}
+
+.wine {
+    width: 500px;
+    height: auto;
+}
+
+/*-- login --*/
+
+/*-- register --*/
+
+/*-- profile --*/
+
+.byme {
+    font-size: x-large;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/*-- add/edit/delete recipe --*/
+
+.edit-delete {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.modal {
+    background-color: rgb(145, 22, 22);
+}
 
 /*-----------------|LARGER DESKTOPS|----------------*/
 

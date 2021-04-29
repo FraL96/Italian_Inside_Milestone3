@@ -51,7 +51,7 @@ $(document).ready(function () {
     $('.regione').on('click', function () {
         $('.regione').removeClass('selected');
         $(this).addClass('selected');
-        window.location.href = ("view_region");
+        window.open("https://8080-chocolate-eagle-rh4ranf2.ws-eu04.gitpod.io/login");
         console.log($(this).data('nome-regione'));
     });
 });
