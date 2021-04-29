@@ -145,10 +145,13 @@ The red scheme is being balanced by the use of black (for the text) and white (f
 ### Fonts
 
 The main fonts used are Playfair Display and Roboto with a fallback of sans-serif. These fonts have been taken from [Google Fonts](https://fonts.google.com/).
+
 I selected these fonts as, in my opinion, Playfair Display give an elegant and antique look to the website, this is why it is being used for the main titles and given them a bigger size.
 Roboto instead, is easier to read and I prefered to use this font for those information that I want to be clear, like the steps of a recipe.
 In some occasion, both fonts are using a **bold** or *italic* style to accentuate some words or to give some movement to a plain text.
-![playfair display](./readme/images/playfair.png) ![roboto](./readme/images/roboto.png)
+
+<img src="readme/images/playfair.png" alt="Playfair Display" width="300px"> <img src="readme/images/roboto.png" alt="Roboto" width="300px">
+
 ### Icons
 
 The icons used in this website are all taken from [Font Awesome](https://fontawesome.com/) and are used to improve the communication or to beautify a button or a tab.
@@ -187,10 +190,10 @@ All fields are required.
 
 ### Navigation
 
-Is really important for the website to be user friendly and to help them access the page they are looking for within between maimum 5 clicks.
+Is really important for the website to be user friendly and to help them access the page they are looking for within between maximum 5 clicks.
 Below you can find the sitemap of Italian Inside.
 
-<img src="readme/images/sitemap.png" alt="sitemap" width="500px">
+<img src="readme/images/site-map.png" alt="sitemap" width="500px">
 
 ## Use of Database
 
@@ -202,9 +205,9 @@ For this project I decided to use Mongo DB as database. Below you can find the s
 
 My wireframes have been created with [Balsamiq](https://balsamiq.com/). Click on the links below to view them.
 
-* [Desktop](./readme/wireframes/desktop-wireframe.png)
-* [Tablet](./readme/wireframes/tablet-wireframe.png)
-* [Mobile](./readme/wireframes/mobile-wireframe.png)
+* [Desktop](./readme/wireframes/desktop-wireframe.pdf)
+* [Tablet](./readme/wireframes/tablet-wireframe.pdf)
+* [Mobile](./readme/wireframes/mobile-wireframe.pdf)
 
 # Features
 
@@ -350,35 +353,50 @@ How to deploy this project - with Heroku:
 ## Content
 
 The website is created by me. Some features like the user authentification are inspired to the [Task Manager](https://github.com/FraL96/Task_manager) project by [Code Institute](https://codeinstitute.net/).
+
 The recipes are from [Giallo Zafferano](https://www.giallozafferano.com/) and where adapted for Italian Inside.
+
 I chose the wine company, [Casale del Giglio](https://www.casaledelgiglio.it/en/), to be sponsored on the website because one of my high school professors works in that company and I often seen and heard about their wines.
 
 ## Media
 
 The logo of Italian Inside is been created by me on [Canva](https://www.canva.com/).
+
 The shortcut icon is been taken from [Favicon.io](https://favicon.io/).
+
 The pictures of the categories have been found on [Pexels.com](https://www.pexels.com/).
+
 The pictures used for the regions are from [Pixabay](https://pixabay.com/it/).
+
 The pictures of the recipes, some are mine, of dishes that I made. Some have been taken from Pexels. Some others have been supplied by my friend [Giacomo](https://www.instagram.com/ziojack93/).
 
 ## Code
 
 The graphic element of the map of Italy is been created by [Antonio Dal Cin](https://codepen.io/Antoniox22/pen/oYRowJ).
+
 Some code snippets like the regEx pattern have been taken from [StackOverflow](https://stackoverflow.com/).
+
 Information on CSS functions have been taken from [W3School](https://www.w3schools.com/).
 
 # Acknowledgements
 
 I want to thank you some people that made the difference and helped me in completing this project.
+
 First of all to my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for supporting me in this project and giving me great advices.
+
 To [Code Institute](https://codeinstitute.net/) for all the things they taught me.
+
 To my friend [Giacomo](https://www.instagram.com/ziojack93/) for realizing some dishes in the last week before my submission so I can have the pictures.
+
 To my parents, [Monica and Gabriel Lupu](https://www.facebook.com/lupu.emonica) that never stop sustaining me.
+
 To [Declan Moore](https://www.linkedin.com/in/declan-moore-83728b80/) for introducing me to Code Institute and giving me the opportunity to start creating a new career.
+
 And last but not least, to my partner, [Cathal Moore](https://www.facebook.com/cathal.moore.39), that always believes in me and pushes me to become the best version of myself.
 
 # Disclaimer
 This project is been created solely for educational purposes.
+
 For question or problems with content and/or copyright, please contact me at the following e-mail address: francesca_lupu@live.it .
 
 [Go back to the top](#Italian-Inside)
