@@ -76,9 +76,13 @@
 
                 <p>
                     {% for option in options %}
-                    {% if option.option_name == recipe.option %}
+
                     <label>
+                        {% if option.option_name == recipe.option %}
                         <input name="option" id="option" value="{{ recipe.option }}" type="radio" checked />
+                        {% else %}
+                        <input name="option" id="option" value="{{ option.option_name }}" type="radio" />
+                        {% endif %}
                         <span>{{ option.option_name }}
                             {% if option.option_name == "Contains meat" %}
                             <i class="fas fa-drumstick-bite red-text text-darken-1"></i>
@@ -89,7 +93,7 @@
                             {% endif %}
                         </span>
                     </label>
-                    {% endif %}
+
                     {% endfor %}
                 </p>
             </div>
