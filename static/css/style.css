@@ -136,9 +136,9 @@ p {
 
 /*-- navbar --*/
 
-header {
+.z {
     z-index: 50;
-    position: relative;
+    position: fixed;
 }
 
 .phone-friendly {
