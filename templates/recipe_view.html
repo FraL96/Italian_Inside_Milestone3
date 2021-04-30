@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<!-- title -->
 <div class="row">
     <div class="col s12 m12 center-align">
         {% for recipe in recipes %}
@@ -44,7 +44,9 @@
             </li>
             {% endfor %}
         </ol>
-        <h4 class="center-align red-text text-darken-4">Buon Appetito!</h4>
+        <h4 class="center-align red-text text-darken-4">Buon Appetito!</h4><br>
+        <h6 class="center-align"><a class="red-text" href="{{ url_for('get_recipes') }}">CLICK HERE TO GO BACK TO ALL
+                RECIPES</a>
     </div>
 </div>
 
