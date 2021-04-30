@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Roboto:ital,wght@0,500;1,300;1,400&display=swap');
 
 /*-- general --*/
+
+.darken {
+    color: black;
+    font-weight: 500;
+}
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -94,9 +100,9 @@ h5 {
 }
 
 .info {
-    font-size: smaller;
+    font-size: medium;
     font-family: 'Roboto', sans-serif;
-    color: grey;
+    color: rgb(0, 0, 0);
 }
 
 p {
@@ -201,8 +207,9 @@ path.selected {
 .instructions {
     margin-top: 30px;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     font-size: small;
+    color: black;
     overflow-wrap: break-word;
     line-height: 1.6;
 }
@@ -266,9 +273,8 @@ path.selected {
 
 /*-- wine --*/
 
-.background {
-    background-image: url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-position: center;
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.158), rgba(255, 255, 255, 0.13)), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-size: cover;
     background-repeat: no-repeat;
     height: 700px;
@@ -278,6 +284,10 @@ path.selected {
 .wine {
     width: 500px;
     height: auto;
+}
+
+.wine-item {
+    margin-top: 100px;
 }
 
 /*-- login --*/
@@ -305,9 +315,13 @@ path.selected {
     background-color: rgb(145, 22, 22);
 }
 
-/*-----------------|LARGER DESKTOPS|----------------*/
+/*-----------------|DESKTOP + IPAD PRO - L|----------------*/
 
-@media (min-width: 992px) {
+@media (min-width: 992px) {}
+
+/*-----------------|LARGER DESKTOPS - XL|----------------*/
+
+@media (min-width: 1200px) {
 
     .titles {
         margin-top: 200px;
