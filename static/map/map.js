@@ -3,13 +3,14 @@ rsr.setViewBox(0, 0, 560.512, 663.114)
 var regions = rsr.set();
 var Piemonte = rsr.path("M79.634,47.228 c1.592-1.213,3.004-2.87,5.694-2.251c0.204,3.029,0.987,6.042-1.072,8.84c-0.295,0.402-0.527,1.177-0.337,1.551 c0.756,1.488,1.413,3.207,2.619,4.244c2.057,1.769,3.585,3.814,4.746,6.197c0.833,1.71,2.272,2.474,4.044,2.602 c1.946,3.362,1.325,6.248-1.105,8.909c-0.576,0.63-1.064,1.351-1.691,1.921c-1.67,1.517-2.377,3.356-2.148,5.596 c0.057,0.557,0.113,1.228-0.133,1.682c-1.169,2.156-0.525,4.16,0.142,6.29c0.453,1.447,1.083,2.415,2.371,3.3 c1.182,0.812,1.916,2.277,2.942,3.575c-0.413,0.701-0.824,1.4-1.225,2.081c0.125,0.337,0.144,0.698,0.331,0.843 c1.113,0.86,1.705,1.991,1.908,3.356c0.284,1.907,1.378,3.299,2.879,4.392c1.832,1.335,2.807,3.188,3.638,5.521 c-1.553,0.339-2.916,0.618-4.269,0.936c-1.813,0.427-2.323,1.049-2.513,2.921c-0.094,0.927-0.208,1.853-0.354,2.772 c-0.021,0.132-0.278,0.226-0.571,0.447c-0.367-0.667-0.767-1.288-1.066-1.954c-1.39-3.094-5.974-3.94-8.284-1.53 c-0.834,0.87-1.18,1.889-0.315,2.773c2.312,2.364,2.369,5.405,2.549,8.342c0.081,1.327,0.38,2.204,1.558,2.684 c1.831,0.746,2.537,2.151,2.568,4.028c0.006,0.373,0.145,0.743,0.205,1.118c0.552,3.447,1.016,4.032,4.442,4.159 c2.242,0.083,4.502-0.309,6.754-0.484c0.549-0.043,1.099-0.069,1.882-0.117c-0.266,2.268,0.968,3.391,2.776,3.854 c0.155,0.314,0.32,0.488,0.306,0.646c-0.199,2.299-0.211,4.402,2.922,4.731c0.413,0.043,0.903,1.107,1.036,1.764 c0.5,2.459,0.438,2.553,2.671,2.883c1.061,0.156,1.716,0.498,2.149,1.505c0.29,0.675,0.962,1.179,1.301,1.842 c0.324,0.633,0.645,1.385,0.609,2.065c-0.164,3.093-0.454,6.179-0.707,9.383c-1.387,0.589-2.555,0.698-3.233-0.994 c-0.07-0.175-0.141-0.366-0.264-0.502c-1.608-1.792-4.093-2.314-5.837-3.987c-0.316-0.303-1.868,0.487-2.725,0.986 c-1.47,0.856-2.987,1.712-2.144,3.979c0.37,0.994-0.638,1.632-1.478,1.71c-1.943,0.18-3.102,1.242-3.537,2.363 c-2.021,0.749-3.538,1.343-5.081,1.865c-0.496,0.168-1.084,0.283-1.582,0.184c-1.663-0.329-3.309-0.752-4.955-1.166 c-2.946-0.741-4.175-0.313-6.053,2.164c-0.276,0.364-0.524,0.75-0.925,1.328c-0.833-0.634-1.556-1.198-2.294-1.742 c-2.582-1.903-5.068-1.311-6.084,1.654c-0.621,1.812-1.047,3.638-2.703,4.834c-0.073,0.053-0.165,0.155-0.159,0.228 c0.196,2.65-1.954,3.761-3.372,5.432c-1.425,1.679-1.364,3.863-0.762,5.957c0.749,2.607,0.568,2.919-2.038,3.366 c-2.831,0.485-2.905,0.556-3.348,3.238c-2.54,0.267-5.022,0.536-7.369-1.088c-0.667-0.461-1.922-0.071-3.174-0.071 c0.191-0.896,0.376-1.59,0.481-2.296c0.227-1.523-0.5-2.535-1.814-1.955c-2.725,1.202-5.971,0.662-8.4,2.77 c-1.316,1.142-3.653,0.981-5.164-0.067c-0.371-0.257-0.801-0.773-1.116-0.713c-3.477,0.671-5.453-1.607-7.534-3.882 c-1.551,0.528-2.841,0.293-4.15-0.849c-0.677-0.591-2.019-0.42-3.355-0.642c-0.092-2.207-1.7-4.029-3.168-5.93 c-0.23-0.298-0.436-0.617-0.624-0.944c-1.659-2.882-1.58-3.35,1.196-5.628c-0.652-0.822-1.321-1.658-1.981-2.499 c-0.577-0.735-1.219-1.432-1.698-2.227c-0.696-1.154-0.457-2.057,0.757-2.86c2.423-1.601,3.275-3.686,3.074-6.736 c-0.075-1.136,0.66-1.743,1.68-1.897c0.64-0.097,1.339,0.178,1.976,0.073c0.596-0.099,1.483-0.354,1.634-0.765 c0.216-0.587-0.116-1.379-0.23-2.08c-0.012-0.076-0.126-0.136-0.194-0.202c-1.771-1.729-2.685-3.613-1.877-6.231 c0.21-0.681-0.633-2.226-1.357-2.543c-1.398-0.612-2.726-2.04-4.688-0.716c-1.208,0.815-2.703,0.062-3.758-1.04 c-0.586-0.612-1.258-1.169-1.722-1.863c-0.49-0.733-0.936-1.567-1.114-2.417c-0.21-1.003-0.032-2.081-0.162-3.108 c-0.319-2.526-0.793-2.92-3.538-3.064c-0.207-0.641-0.393-1.352-0.666-2.028c-0.279-0.69-0.643-1.345-1.024-2.127 c1.194-1.017,2.161-2.046,3.971-1.75c0.656,0.107,1.463-0.707,2.31-1.16c0.525,0.255,1.109,0.551,1.703,0.825 c1.941,0.897,2.261,0.789,3.678-1.021c0.265-0.339,0.668-0.597,1.053-0.808c0.406-0.222,1.049-0.213,1.274-0.529 c1.398-1.959,3.086-2.861,5.639-3.029c2.36-0.155,4.041-3.682,3.167-5.955c-0.575-1.495-0.43-2.538,0.808-3.475 c0.074-0.056,0.135-0.134,0.194-0.208c2.402-3.021,2.371-3.256-0.707-5.732c-0.138-0.111-0.211-0.301-0.61-0.891 c1.742,0.922,2.702,0.145,3.897-0.578c1.612-0.976,3.645-2.074,5.352-1.874c2.241,0.261,3.131-0.933,4.17-2.177 c2.138-2.559,2.336-2.656,5.38-1.236c0.425,0.198,0.861,0.469,1.309,0.507c2.612,0.225,5.251,0.695,7.838,0.506 c3.869-0.283,6.597-2.587,8.287-6.032c0.306-0.623,0.465-1.606,0.185-2.173c-0.727-1.476-0.466-2.701,0.627-3.944 c-0.737-1.116-1.409-2.134-2.081-3.151c-1.147-1.736-1.577-3.579-1.064-5.655c0.786-3.179,1.482-6.38,2.258-9.753 c0.564-0.04,1.194-0.098,1.826-0.128c2.655-0.128,4.455-1.762,4.585-4.407c0.078-1.575,0.43-2.572,2.139-3.174 c4.881-1.721,5.832-6.611,2.152-10.334c-0.197-0.199-0.354-0.439-0.541-0.674c0.393-1.074,1.015-1.797,2.265-1.773 c1.487,0.029,2.394-0.792,3.204-1.986c0.623-0.917,1.501-1.724,2.415-2.37C80.403,50.028,80.435,50.073,79.634,47.228z")
 Piemonte.attr({
+    id: 'Piemonte',
     fill: '#AF2929',
     class: 'regione Piemonte',
     "data-nome-regione": 'Piemonte',
     stroke: '#AF2929',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Piemonte');
 regions.push(Piemonte);
@@ -21,7 +22,7 @@ Lombardia.attr({
     "data-nome-regione": 'Lombardia',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Lombardia');
 regions.push(Lombardia);
@@ -33,7 +34,7 @@ EmiliaRomagna.attr({
     "data-nome-regione": 'Emilia-Romagna',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'EmiliaRomagna');
 regions.push(EmiliaRomagna);
@@ -45,7 +46,7 @@ Toscana.attr({
     stroke: '#F51D0A',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Toscana');
 regions.push(Toscana);
@@ -57,7 +58,7 @@ Sicilia.attr({
     "data-nome-regione": 'Sicilia',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Sicilia');
 regions.push(Sicilia);
@@ -69,7 +70,7 @@ Puglia.attr({
     stroke: '#A10C06',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Puglia');
 regions.push(Puglia);
@@ -81,7 +82,7 @@ Lazio.attr({
     stroke: '#A31000',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Lazio');
 regions.push(Lazio);
@@ -93,7 +94,7 @@ TrentinoAltoAdige.attr({
     "data-nome-regione": 'Trentino-Alto Adige',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'TrentinoAltoAdige');
 regions.push(TrentinoAltoAdige);
@@ -105,7 +106,7 @@ Calabria.attr({
     "stroke-miterlimit": '10',
     class: 'regione Calabria',
     "data-nome-regione": 'Calabria',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Calabria');
 regions.push(Calabria);
@@ -117,7 +118,7 @@ Campania.attr({
     "stroke-miterlimit": '10',
     class: 'regione Campania',
     "data-nome-regione": 'Campania',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Campania');
 regions.push(Campania);
@@ -129,7 +130,7 @@ Abruzzo.attr({
     "data-nome-regione": 'Abruzzo',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Abruzzo');
 regions.push(Abruzzo);
@@ -141,7 +142,7 @@ Marche.attr({
     "stroke-miterlimit": '10',
     class: 'regione Marche',
     "data-nome-regione": 'Marche',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Marche');
 regions.push(Marche);
@@ -153,7 +154,7 @@ Basilicata.attr({
     "data-nome-regione": 'Basilicata',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Basilicata');
 regions.push(Basilicata);
@@ -165,7 +166,7 @@ Umbria.attr({
     "data-nome-regione": 'Umbria',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Umbria');
 regions.push(Umbria);
@@ -177,7 +178,7 @@ Liguria.attr({
     "data-nome-regione": 'Liguria',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Liguria');
 regions.push(Liguria);
@@ -189,7 +190,7 @@ Molise.attr({
     "stroke-miterlimit": '10',
     class: 'regione Molise',
     "data-nome-regione": 'Molise',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Molise');
 regions.push(Molise);
@@ -201,7 +202,7 @@ ValledAosta.attr({
     stroke: '#E04B1D',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'ValledAosta');
 regions.push(ValledAosta);
@@ -213,7 +214,7 @@ FriuliVeneziaGiulia.attr({
     "data-nome-regione": 'Friuli-Venezia Giulia',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'FriuliVeneziaGiulia');
 regions.push(FriuliVeneziaGiulia);
@@ -225,7 +226,7 @@ Veneto.attr({
     "data-nome-regione": 'Veneto',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Veneto');
 regions.push(Veneto);
@@ -237,12 +238,12 @@ Sardegna.attr({
     stroke: '#F0003B',
     "stroke-width": '2',
     "stroke-miterlimit": '10',
-    parent: 'group_a',
+    parent: 'regions',
     'stroke-opacity': '1'
 }).data('id', 'Sardegna');
 regions.push(Sardegna);
-group_a.attr({
-    'name': 'group_a'
+regions.attr({
+    'name': 'regions'
 });
 var rsrGroups = [regions];
 regions.push(Piemonte, Lombardia, EmiliaRomagna, Toscana, Sicilia, Puglia, Lazio, TrentinoAltoAdige, Calabria, Campania, Abruzzo, Marche, Basilicata, Umbria, Liguria, Molise, ValledAosta, FriuliVeneziaGiulia, Veneto, Sardegna);

@@ -24,15 +24,8 @@ def index():
     return render_template("index.html")
 
 
-# ------------------REGIONS-------------------
-@app.route("/view_region/<region_id>")
-def view_region(region_id):
-    regions = list(mongo.db.regions.find({"_id": ObjectId(region_id)}))
-    return render_template("regions.html", regions=regions)
-
-
 # ------------------ALL RECIPES-------------------
-@ app.route("/get_recipes")
+@app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     categories = list(mongo.db.categories.find())
@@ -42,7 +35,7 @@ def get_recipes():
 
 
 # ------------------SEARCH-------------------
-@ app.route("/search", methods=["GET", "POST"])
+@app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
@@ -50,7 +43,7 @@ def search():
 
 
 # ------------------RECIPE VIEW-------------------
-@ app.route("/view_recipe/<recipe_id>")
+@app.route("/view_recipe/<recipe_id>")
 def view_recipe(recipe_id):
     recipes = list(mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
     return render_template("recipe_view.html",
@@ -58,13 +51,13 @@ def view_recipe(recipe_id):
 
 
 # ------------------CASALE DEL GIGLIO-------------------
-@ app.route("/wine")
+@app.route("/wine")
 def wine():
     return render_template("wine.html")
 
 
 # ------------------PROFILE-------------------
-@ app.route("/profile/<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -81,7 +74,7 @@ def profile(username):
 
 
 # ------------------ADDED BY ME-------------------
-@ app.route("/added_by_me/<username>")
+@app.route("/added_by_me/<username>")
 def added_by_me(username):
     recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
     return render_template("profile.html", username=session["user"],
@@ -89,7 +82,7 @@ def added_by_me(username):
 
 
 # ------------------ADD RECIPE-------------------
-@ app.route("/add_recipe", methods=["GET", "POST"])
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
         recipe = {
@@ -119,7 +112,7 @@ def add_recipe():
 
 
 # ------------------EDIT RECIPE-------------------
-@ app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
         info = {
@@ -149,7 +142,7 @@ def edit_recipe(recipe_id):
 
 
 # ------------------DELETE RECIPE-------------------
-@ app.route("/delete_recipe/<recipe_id>")
+@app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe deleted")
@@ -157,7 +150,7 @@ def delete_recipe(recipe_id):
 
 
 # ------------------LOGIN-------------------
-@ app.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
@@ -181,14 +174,14 @@ def login():
 
 
 # ------------------LOG OUT-------------------
-@ app.route("/logout")
+@app.route("/logout")
 def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
 
 # ------------------REGISTER-------------------
-@ app.route("/register", methods=["GET", "POST"])
+@app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(

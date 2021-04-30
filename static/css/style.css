@@ -118,8 +118,6 @@ p {
 .box {
     width: 100%;
     margin: 0;
-    z-index: 900;
-    position: relative;
 }
 
 .nice {
@@ -147,11 +145,6 @@ header {
     font-family: 'Playfair Display', sans-serif;
     font-style: italic;
     margin-top: 50px;
-}
-
-.nav-wrapper {
-    z-index: 900;
-    position: relative;
 }
 
 .sidenav li>a {
@@ -219,8 +212,6 @@ path.selected {
     width: inherit;
     text-align: center;
     margin-top: 20px;
-    z-index: 1;
-    position: relative;
 }
 
 /*-- recipes --*/
