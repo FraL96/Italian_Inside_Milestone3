@@ -305,7 +305,7 @@ In the future I would like to add to Italian Inside:
 
 # Deployment
 
-How to clone this project:
+**How to clone this project:**
 
 1. Log In into GitHub and access the repository [FraL96/Italian_Inside_Milestone3](https://github.com/FraL96/Italian_Inside_Milestone3).
 2. Click on the "Code" button (near the green "GitPod" one).
@@ -322,7 +322,7 @@ How to clone this project:
 
 <img src="readme/images/clone3.png" alt="How to clone 3" width="500px">
 
-How to run the code locally:
+**How to run the code locally:**
 
 1. Create the required databases. You can do this by accessing Mongo DB. Create a cluster and then create the required collections (as seen in [Use of Database](#Use-of-Database)). Don't forget to add the value to every key.
 2. Go to GitPod and install the requirements by typing the following in the terminal: pip3 install -r requirements.txt .
@@ -332,7 +332,7 @@ How to run the code locally:
 
 4. At this point you can go back to the terminal and type "python3 app.py" to open the preview of the website.
 
-How to deploy this project - with Heroku:
+**How to deploy this project - with Heroku:**
 
 1. From the terminal: type "pip3 freeze --local > requirements.txt" to update the list of requirements needed to run this application.
 2. Type " echo web: python app.py > Procfile " to create the Procfile.
