@@ -13,7 +13,7 @@
     {% block styles %}
     {% endblock %}
     <title>Italian Inside</title>
-    <link rel="shortcut icon" type="image/png" href="static/images/pizza.png">
+    <link rel="stylesheet" type="image/png" href="static/images/pizza.png">
 </head>
 
 <body>
@@ -51,11 +51,8 @@
 
                 <!-- mobile collapsible menu -->
                 <ul class="sidenav center-align custom" id="mobile-demo">
-                    <li>
-                        <h4 class="center-align"></h4>
-                    </li>
-                    <a href="{{ url_for('index') }}"><img class="brand-logo logo" src="static/images/italian_inside.png"
-                            alt="Italian Inside"></a>
+                    <a href="{{ url_for('index') }}"><img class="brand-logo logo side"
+                            src="static/images/italian_inside.png" alt="Italian Inside"></a>
                     <li><a class="white-text phone-friendly" href="{{ url_for('get_recipes') }}">- All Recipes -</a>
                     </li>
                     <li><a class="white-text phone-friendly" href="{{ url_for('wine') }}">- Casale del Giglio -</a></li>

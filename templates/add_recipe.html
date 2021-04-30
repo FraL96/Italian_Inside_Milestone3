@@ -91,8 +91,8 @@
                 <i class="fas fa-dumbbell prefix red-text text-darken-1"></i>
                 <select id="difficulty" name="difficulty" class="validate" required>
                     <option value="" disabled selected>Difficulty</option>
-                    {% for difficulty in difficulty %}
-                    <option value="{{ difficulty.difficulty_level }}">{{ difficulty.difficulty_level }}</option>
+                    {% for diff in difficulty %}
+                    <option value="{{ diff.difficulty_level }}">{{ diff.difficulty_level }}</option>
                     {% endfor %}
                 </select>
                 <label for="region">Select a difficulty level</label>

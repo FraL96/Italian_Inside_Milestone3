@@ -59,7 +59,7 @@ def wine():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     if not session.get("user"):
-        return render_template("error_handler/404-error.html")
+        return render_template("error-handler/404-error.html")
 
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -80,7 +80,7 @@ def profile(username):
 def added_by_me(username):
 
     if not session.get("user"):
-        return render_template("error_handler/404-error.html")
+        return render_template("error-handler/404-error.html")
 
     recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
     return render_template("profile.html", username=session["user"],
@@ -92,7 +92,7 @@ def added_by_me(username):
 def add_recipe():
 
     if not session.get("user"):
-        return render_template("error_handler/404-error.html")
+        return render_template("error-handler/404-error.html")
 
     if request.method == "POST":
         recipe = {
@@ -126,7 +126,7 @@ def add_recipe():
 def edit_recipe(recipe_id):
 
     if not session.get("user"):
-        return render_template("error_handler/404-error.html")
+        return render_template("error-handler/404-error.html")
 
     elif request.method == "POST":
         info = {
@@ -160,7 +160,7 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
 
     if not session.get("user"):
-        return render_template("error_handler/404-error.html")
+        return render_template("error-handler/404-error.html")
 
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe deleted")

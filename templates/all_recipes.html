@@ -34,8 +34,7 @@
             {% if recipe.option == "Contains meat" %}
             <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
                 class="collection-item black-text categ center-align pasta">{{ recipe.recipe_name }}<i
-                    class="fas fa-drumstick-bite tooltipped" data-position="right"
-                    data-tooltip="Contains meat"></a></i></a>
+                    class="fas fa-drumstick-bite tooltipped" data-position="right" data-tooltip="Contains meat"></i></a>
             {% elif recipe.option == "Contains fish" %}
             <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
                 class="collection-item black-text categ center-align pasta">{{ recipe.recipe_name }}<i
@@ -50,8 +49,7 @@
             {% if recipe.option == "Contains meat" %}
             <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
                 class="collection-item black-text categ center-align pizza">{{ recipe.recipe_name }}<i
-                    class="fas fa-drumstick-bite tooltipped" data-position="right"
-                    data-tooltip="Contains meat"></a></i></a>
+                    class="fas fa-drumstick-bite tooltipped" data-position="right" data-tooltip="Contains meat"></i></a>
             {% elif recipe.option == "Contains fish" %}
             <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
                 class="collection-item black-text categ center-align pizza">{{ recipe.recipe_name }}<i
@@ -65,8 +63,7 @@
             {% elif recipe.category == "Meat" %}
             <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
                 class="collection-item black-text categ center-align meat">{{ recipe.recipe_name }}<i
-                    class="fas fa-drumstick-bite tooltipped" data-position="right"
-                    data-tooltip="Contains meat"></a></i></a>
+                    class="fas fa-drumstick-bite tooltipped" data-position="right" data-tooltip="Contains meat"></i></a>
 
             {% elif recipe.category == "Fish" %}
             <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
