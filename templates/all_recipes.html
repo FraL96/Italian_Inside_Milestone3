@@ -9,69 +9,85 @@
 
 
 <div class="row search-bar">
-    <div class="col s12 m6 offset-m3">
-        <form action="{{ url_for('search') }}" method="POST">
-            <div class="row center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix red-text"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query">Search Recipes</label>
-                </div>
-                <div class="col s12 m4">
-                    <a href="{{ url_for('get_recipes')}}" class="red btn round-button"><i class="fas fa-undo"></i></a>
-                    <button type="submit" class="white btn round-button"><i class="fas fa-search red-text"></i></button>
-                </div>
+    <form action="{{ url_for('search') }}" method="post" class="col s12 m6 offset-m3">
+        <div class="row center-align valign-wrapper">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix red-text"></i>
+                <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                <label for="query">Search Recipes</label>
             </div>
-        </form>
-    </div>
+            <div class="col s12 m4">
+                <a href="{{ url_for('get_recipes')}}" class="red btn round-button"><i class="fas fa-undo"></i></a>
+                <button type="submit" class="white btn round-button"><i class="fas fa-search red-text"></i></button>
+            </div>
+        </div>
+    </form>
 </div>
-
-
-
 
 <div class="row recipes">
     <div class="col s12 m12">
-
-        <ul class="collection with-header border">
-            {% for category in categories %}
-            {% if category.category_name == "Pasta" %}
-            <li class="collection-header white-text text-shadow categ center-align pasta">
-                <h4>{{ category.category_name }}</h4>
-            </li>
-            {% elif category.category_name == "Meat" %}
-            <li class="collection-header white-text  text-shadow categ center-align meat">
-                <h4>{{ category.category_name }}</h4>
-            </li>
-            {% elif category.category_name == "Fish" %}
-            <li class="collection-header white-text  text-shadow categ center-align fish">
-                <h4>{{ category.category_name }}</h4>
-            </li>
-            {% elif category.category_name == "Pizza" %}
-            <li class="collection-header white-text  text-shadow categ center-align pizza">
-                <h4>{{ category.category_name }}</h4>
-            </li>
-            {% elif category.category_name == "Desserts" %}
-            <li class="collection-header white-text  text-shadow categ center-align desserts">
-                <h4>{{ category.category_name }}</h4>
-            </li>
-
-            {% endif %}
-
+        {% if recipes|length > 0%}
+        <div class="collection">
             {% for recipe in recipes %}
-            {% if recipe.category == category.category_name %}
+
+            {% if recipe.category == "Pasta" %}
+            {% if recipe.option == "Contains meat" %}
             <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
-                class="collection-item center-align">{{ recipe.recipe_name }}
-                {% if recipe.option == "Contains meat" %}
-                <i class="fas fa-drumstick-bite tooltipped" data-position="right" data-tooltip="Contains meat"></a></i>
+                class="collection-item black-text categ center-align pasta">{{ recipe.recipe_name }}<i
+                    class="fas fa-drumstick-bite tooltipped" data-position="right"
+                    data-tooltip="Contains meat"></a></i></a>
             {% elif recipe.option == "Contains fish" %}
-            <i class="fas fa-fish tooltipped" data-position="right" data-tooltip="Contains fish"></i>
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
+                class="collection-item black-text categ center-align pasta">{{ recipe.recipe_name }}<i
+                    class="fas fa-fish tooltipped" data-position="right" data-tooltip="Contains fish"></i></a>
             {% elif recipe.option == "Vegetarian" %}
-            <i class="fas fa-leaf tooltipped" data-position="right" data-tooltip="Vegetarian"></i>
-            {% endif %}</a>
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
+                class="collection-item black-text categ center-align pasta">{{ recipe.recipe_name }}<i
+                    class="fas fa-leaf tooltipped" data-position="right" data-tooltip="Vegetarian"></i></a>
+            {% endif %}
+
+            {% elif recipe.category == "Pizza" %}
+            {% if recipe.option == "Contains meat" %}
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
+                class="collection-item black-text categ center-align pizza">{{ recipe.recipe_name }}<i
+                    class="fas fa-drumstick-bite tooltipped" data-position="right"
+                    data-tooltip="Contains meat"></a></i></a>
+            {% elif recipe.option == "Contains fish" %}
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
+                class="collection-item black-text categ center-align pizza">{{ recipe.recipe_name }}<i
+                    class="fas fa-fish tooltipped" data-position="right" data-tooltip="Contains fish"></i></a>
+            {% elif recipe.option == "Vegetarian" %}
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
+                class="collection-item black-text categ center-align pizza">{{ recipe.recipe_name }}<i
+                    class="fas fa-leaf tooltipped" data-position="right" data-tooltip="Vegetarian"></i></a>
+            {% endif %}
+
+            {% elif recipe.category == "Meat" %}
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
+                class="collection-item black-text categ center-align meat">{{ recipe.recipe_name }}<i
+                    class="fas fa-drumstick-bite tooltipped" data-position="right"
+                    data-tooltip="Contains meat"></a></i></a>
+
+            {% elif recipe.category == "Fish" %}
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
+                class="collection-item black-text categ center-align fish">{{ recipe.recipe_name }}<i
+                    class="fas fa-fish tooltipped" data-position="right" data-tooltip="Contains fish"></i></a>
+
+            {% elif recipe.category == "Desserts" %}
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
+                class="collection-item black-text categ center-align desserts">{{ recipe.recipe_name }}<i
+                    class="fas fa-leaf tooltipped" data-position="right" data-tooltip="Vegetarian"></i></a>
             {% endif %}
             {% endfor %}
-            {% endfor %}
-        </ul>
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 m12 center-align">
+        {% else %}
+        <h3 class="red-text center-align sorry">Sorry, no recipe found!</h3>
+        {% endif %}
     </div>
 </div>
 

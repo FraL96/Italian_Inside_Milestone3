@@ -82,6 +82,12 @@ h4 {
     font-style: italic;
 }
 
+.sorry {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
 h5 {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 300;
@@ -229,16 +235,14 @@ path.selected {
 }
 
 .categ {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: larger;
     font-style: italic;
+    letter-spacing: 2px;
 }
 
 .collection a.collection-item {
-    color: black;
-    background-color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
     margin: 5px;
     line-height: 42px;
 }
@@ -248,24 +252,24 @@ path.selected {
 }
 
 .pasta {
-    background-image: url("https://images.pexels.com/photos/6103858/pexels-photo-6103858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/6103858/pexels-photo-6103858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .meat {
-    background-image: url("https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-position: center;
 }
 
 .fish {
-    background-image: url("https://images.pexels.com/photos/2042591/pexels-photo-2042591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/2042591/pexels-photo-2042591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .pizza {
-    background-image: url("https://images.pexels.com/photos/4109083/pexels-photo-4109083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/4109083/pexels-photo-4109083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .desserts {
-    background-image: url("https://cdn.pixabay.com/photo/2020/01/05/07/15/colorful-4742428_1280.jpg");
+    background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://cdn.pixabay.com/photo/2020/01/05/07/15/colorful-4742428_1280.jpg");
     background-position: center;
 }
 
