@@ -194,6 +194,7 @@ def login():
 # ------------------LOG OUT-------------------
 @app.route("/logout")
 def logout():
+    flash("Come back soon!")
     session.pop("user")
     return redirect(url_for("login"))
 

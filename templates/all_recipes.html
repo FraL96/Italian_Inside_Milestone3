@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--title-->
 <div class="row">
     <div class="col s12 m12 center-align">
         <h3 class="titles">Find the recipe for you!</h3>
     </div>
 </div>
 
-
+<!--Search bar-->
 <div class="row search-bar">
     <form action="{{ url_for('search') }}" method="post" class="col s12 m6 offset-m3">
         <div class="row center-align valign-wrapper">
@@ -24,12 +25,12 @@
     </form>
 </div>
 
-<div class="row recipes">
+<!--Recipes-->
+<div class="row">
     <div class="col s12 m12">
         {% if recipes|length > 0%}
         <div class="collection">
             {% for recipe in recipes %}
-
             {% if recipe.category == "Pasta" %}
             {% if recipe.option == "Contains meat" %}
             <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}"
@@ -80,6 +81,7 @@
 
     </div>
 </div>
+<!--Test to display if no result is found from search-->
 <div class="row">
     <div class="col s12 m12 center-align">
         {% else %}

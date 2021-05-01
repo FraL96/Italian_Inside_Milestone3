@@ -3,15 +3,189 @@
 
 /*-- general --*/
 
-
-/* MAP */
-
-/* -------------------------------------------------------------
-													QTIP 
-	-------------------------------------------------------------*/
-area {
-    cursor: pointer;
+h4 {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    font-style: italic;
 }
+
+h5 {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 300;
+}
+
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    font-style: italic;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.158), rgba(255, 255, 255, 0.13)), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: auto;
+}
+
+.instructions {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 400;
+    font-size: small;
+    color: black;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+.titles {
+    margin-top: 150px;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.playfair {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.flash {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: smaller;
+}
+
+.info {
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.fixed-header {
+    width: 100%;
+    position: fixed;
+    margin-top: 0px;
+}
+
+.categ {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.darken {
+    color: black;
+    font-weight: 500;
+}
+
+.rec {
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-small {
+    margin-left: 20px;
+    display: inline;
+}
+
+.space {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    text-align: left;
+}
+
+.small-ones {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+}
+
+/*-- navbar --*/
+
+.custom {
+    background: -o-radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
+    background: radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.side {
+    margin-top: 20px;
+}
+
+.box {
+    width: 100%;
+    margin: 0;
+}
+
+.z {
+    z-index: 50;
+    position: fixed;
+}
+
+.logo {
+    width: 100px;
+    z-index: 900;
+    position: relative;
+}
+
+.phone-friendly {
+    font-family: 'Playfair Display', sans-serif;
+    font-style: italic;
+    margin-top: 50px;
+}
+
+.sidenav li>a {
+    font-size: medium;
+}
+
+nav ul a {
+    font-size: large;
+}
+
+/*-- footer --*/
+
+.social-links a i {
+    color: white;
+    width: 40px;
+    height: auto;
+    margin-top: 5px;
+}
+
+.social-icons {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.nice {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+}
+
+/*-- home --*/
 
 .qtip {
     position: absolute;
@@ -35,49 +209,6 @@ area {
     word-wrap: break-word;
 }
 
-.qtip-titlebar {
-    position: relative;
-    padding: 5px 35px 5px 10px;
-    overflow: hidden;
-    border-width: 0 0 1px;
-    font-weight: bold;
-}
-
-.qtip-titlebar+.qtip-content {
-    border-top-width: 0 !important;
-}
-
-
-
-
-
-/* IE fix */
-.qtip-titlebar .ui-icon,
-.qtip-icon .ui-icon {
-    display: block;
-    text-indent: -1000em;
-    direction: ltr;
-}
-
-.qtip-icon,
-.qtip-icon .ui-icon {
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    text-decoration: none;
-}
-
-.qtip-icon .ui-icon {
-    width: 18px;
-    height: 14px;
-    line-height: 14px;
-    text-align: center;
-    text-indent: 0;
-    font: normal bold 10px/13px Tahoma, sans-serif;
-    color: inherit;
-    background: transparent none no-repeat -100em -100em;
-}
-
 .qtip-default {
     font-style: italic;
     font-weight: bold;
@@ -92,303 +223,12 @@ area {
     padding: 5px;
 }
 
-/* IE9 fix - removes all filters */
-.qtip:not(.ie9haxors) div.qtip-content,
-.qtip:not(.ie9haxors) div.qtip-titlebar {
-    filter: none;
-    -ms-filter: none;
-}
-
-.qtip .qtip-tip {
-    margin: 0 auto;
-    overflow: hidden;
-    z-index: 10;
-}
-
-/* Opera bug #357 - Incorrect tip position
-https://github.com/Craga89/qTip2/issues/367 */
-x:-o-prefocus,
-.qtip .qtip-tip {
-    visibility: hidden;
-}
-
 .qtip .qtip-tip,
 .qtip .qtip-tip .qtip-vml,
 .qtip .qtip-tip canvas {
     position: absolute;
-    color: #123456;
     background: transparent;
     border: 0 dashed transparent;
-}
-
-.qtip .qtip-tip canvas {
-    top: 0;
-    left: 0;
-}
-
-.qtip .qtip-tip .qtip-vml {
-    behavior: url(#default#VML);
-    display: inline-block;
-    visibility: visible;
-}
-
-#qtip-overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Applied to modals with show.modal.blur set to true */
-#qtip-overlay.blurs {
-    cursor: pointer;
-}
-
-/* Change opacity of overlay here */
-#qtip-overlay div {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.7;
-    filter: alpha(opacity=70);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-}
-
-.qtipmodal-ie6fix {
-    position: absolute !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.darken {
-    color: black;
-    font-weight: 500;
-}
-
-.error {
-    margin-top: 50%;
-}
-
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.side {
-    margin-top: 20px;
-}
-
-.join {
-    font-family: 'Playfair Display', sans-serif;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 20px;
-    border: 20px;
-    color: red;
-    background-color: #fff;
-}
-
-.pic {
-    line-height: 10px;
-}
-
-.rec {
-    font-family: 'Roboto', sans-serif;
-}
-
-.btn-small {
-    margin-left: 20px;
-    display: inline;
-}
-
-.round-button {
-    border-radius: 50%;
-}
-
-.space {
-    margin-top: 100px;
-    margin-bottom: 20px;
-    font-size: 50px;
-    text-align: left;
-}
-
-.small-ones {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-}
-
-.image {
-    border: solid black 5px;
-}
-
-#page-container {
-    position: relative;
-    min-height: 100vh;
-}
-
-#content-wrap {
-    padding-bottom: 2.5rem;
-}
-
-h6 {
-    font-family: 'Roboto', sans-serif;
-}
-
-h4 {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.titles {
-    margin-top: 150px;
-    margin-bottom: 30px;
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.sorry {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-h5 {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 300;
-}
-
-.playfair {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-    font-size: medium;
-}
-
-.flash {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: smaller;
-}
-
-.info {
-    font-size: medium;
-    font-family: 'Roboto', sans-serif;
-    color: rgb(0, 0, 0);
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: medium;
-    font-style: italic;
-}
-
-.fixed-header {
-    width: 100%;
-    position: fixed;
-    margin-top: 0px;
-}
-
-.logo {
-    width: 100px;
-}
-
-.box {
-    width: 100%;
-    margin: 0;
-}
-
-.nice {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-}
-
-.italic {
-    font-style: italic;
-}
-
-.custom {
-    background: -o-radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
-    background: radial-gradient(circle, rgba(185, 175, 202, 1) 0%, rgb(218, 51, 51) 100%);
-}
-
-/*-- navbar --*/
-
-.z {
-    z-index: 50;
-    position: fixed;
-}
-
-.phone-friendly {
-    font-family: 'Playfair Display', sans-serif;
-    font-style: italic;
-    margin-top: 50px;
-}
-
-.sidenav li>a {
-    font-size: medium;
-}
-
-nav ul a {
-    font-size: large;
-}
-
-.logo {
-    z-index: 900;
-    position: relative;
-}
-
-/*-- footer --*/
-
-.social-links a i {
-    color: white;
-    width: 40px;
-    height: auto;
-    margin-top: 5px;
-}
-
-.social-icons {
-    margin-left: 15px;
-    font-size: 18px;
-}
-
-#footer {
-    position: absolute;
-    background-color: #d32f2f;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-}
-
-/*-- home --*/
-
-.instructions {
-    margin-top: 30px;
-    text-align: center;
-    font-weight: 400;
-    font-size: small;
-    color: black;
-    overflow-wrap: break-word;
-    line-height: 1.6;
 }
 
 .italia {
@@ -399,28 +239,30 @@ nav ul a {
     position: relative;
 }
 
-/*-- recipes --*/
+/*-- all recipes --*/
 
 .search-bar {
     margin-left: -15px;
     margin-right: -15px;
 }
 
-.categ {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: larger;
+.image {
+    border: solid black 5px;
+}
+
+.round-button {
+    border-radius: 50%;
+}
+
+.sorry {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
     font-style: italic;
-    letter-spacing: 2px;
 }
 
 .collection a.collection-item {
     margin: 5px;
     line-height: 42px;
-}
-
-.border {
-    border: solid black 5px;
 }
 
 .pasta {
@@ -445,41 +287,13 @@ nav ul a {
     background-position: center;
 }
 
-/*-- recipe view --*/
-
 /*-- wine --*/
-
-body {
-    background: linear-gradient(rgba(255, 255, 255, 0.158), rgba(255, 255, 255, 0.13)), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 700px;
-    width: auto;
-}
-
-.wine {
-    width: 500px;
-    height: auto;
-}
 
 .wine-item {
     margin-top: 100px;
 }
 
-/*-- login --*/
-
-/*-- register --*/
-
 /*-- profile --*/
-
-.byme {
-    font-size: x-large;
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-/*-- add/edit/delete recipe --*/
 
 .edit-delete {
     font-size: 20px;
@@ -491,9 +305,24 @@ body {
     background-color: rgb(145, 22, 22);
 }
 
-/*-----------------|DESKTOP + IPAD PRO - L|----------------*/
+.byme {
+    font-size: x-large;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
 
-@media (min-width: 992px) {}
+/*-- add/edit recipe --*/
+
+.pic {
+    line-height: 10px;
+}
+
+/*-- 404 error --*/
+
+.error {
+    margin-top: 50%;
+}
 
 /*-----------------|LARGER DESKTOPS - XL|----------------*/
 

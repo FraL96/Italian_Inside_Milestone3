@@ -1,12 +1,17 @@
 $(document).ready(function () {
+    //sidenav
     $('.sidenav').sidenav({
         edge: "right"
     });
+    //collapsible
     $('.collapsible').collapsible();
+    //tooltip  - all recipes
     $('.tooltipped').tooltip();
+    //dropdown options - add/edit recipes
     $('select').formSelect();
+    //modal
     $('.modal').modal();
-
+    //code copied from Mini Project - Task Manager from Code Institute - used to modify a Materialize class
     validateMaterializeSelect();
 
     function validateMaterializeSelect() {
@@ -47,7 +52,7 @@ $(document).ready(function () {
             }
         });
     }
-
+    //tooltips - Italy map
     var tooltipsmall = ['#Valle-d-Aosta', '#Molise', '#Liguria', '#Piemonte', '#Lombardia', '#Trentino-Alto-Adige', '#Veneto',
         '#Umbria', '#Lazio', '#Sicilia', '#Sardegna', '#Calabria', '#Campania', '#Basilicata', '#Toscana', '#Abruzzo', '#Friuli-Venezia-Giulia', '#Marche', '#Emilia-Romagna', '#Puglia'
     ]

@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--title-->
+
 <div class="row">
     <div class="col s12 m12 center-align">
         <h3 class="titles">Register here!</h3>
@@ -11,6 +13,7 @@
 </div>
 
 <!-- flash messages -->
+
 <section>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -28,7 +31,7 @@
 <div class="row">
     <form class="col s12 m8" method="POST" action="{{ url_for('register') }}">
 
-        <!-- username -->
+        <!-- form register -->
 
         <div class="row">
             <div class="input-field col s12 m10 offset-m4">
@@ -51,10 +54,11 @@
                     special character, a lower case and an upper case letter.</span>
             </div>
         </div>
+        <!--submit button-->
         <button type="submit" class="col s12 m10 offset-m4 btn-large red darken-2 playfair">Register</button>
     </form>
 </div>
-
+<!--link to "login"-->
 <div class="row">
     <div class="col s12">
         <p class="center-align">

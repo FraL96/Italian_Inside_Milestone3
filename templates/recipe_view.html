@@ -8,11 +8,12 @@
         <h3 class="titles">- {{ recipe.recipe_name }} -</h3>
     </div>
 </div>
-
+<!--picture-->
 <div class="row">
     <div class="col s12 l6 center-align">
         <img src="{{ recipe.picture }}" width="70%" height="auto" alt="Recipe" class="image">
     </div>
+    <!--recipe-->
     <div class="col s12 l6 center-align">
         <h6><i class="fas fa-map-signs prefix"></i> Region: {{ recipe.region }}
         </h6>
@@ -34,6 +35,7 @@
         </ul>
     </div>
 </div>
+<!--steps recipe-->
 <div class="row">
     <div class="col l8 offset-l2">
         <h4 class="center-align">Preparation</h4>
@@ -45,6 +47,7 @@
             {% endfor %}
         </ol>
         <h4 class="center-align red-text text-darken-4">Buon Appetito!</h4><br>
+        <!--button to go back to all recipes-->
         <h6 class="center-align"><a class="red-text" href="{{ url_for('get_recipes') }}">CLICK HERE TO GO BACK TO ALL
                 RECIPES</a></h6>
     </div>
