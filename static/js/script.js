@@ -48,9 +48,28 @@ $(document).ready(function () {
         });
     }
 
-    $('.regione').hover(function () {
-        $('.regione').removeClass('selected');
-        $(this).addClass('selected');
-    });
+    var tooltipinfo = ['#Piemonte', '#Lombardia', '#Valle-d-Aosta', '#Liguria', '#Trentino-Alto-Adige', '#Veneto',
+        '#Umbria', '#Lazio', '#Sicilia', '#Sardegna', '#Calabria', '#Campania', '#Basilicata', '#Toscana', '#Abruzzo', '#Friuli-Venezia-Giulia', '#Marche', '#Molise', '#Emilia-Romagna', '#Puglia'
+    ]
 
+    $(tooltipinfo).qtip({
+        content: function () {
+            return $(this).data('tooltip'); //store data in data-tooltip
+        },
+        position: {
+            my: 'bottom center', // Position my top left...
+            at: 'top center', // at the bottom right of...
+            adjust: {
+                y: 30
+            }
+        },
+        style: {
+            tip: {
+                corner: true,
+                border: 1,
+                width: 15,
+                height: 7
+            }
+        }
+    });
 });
