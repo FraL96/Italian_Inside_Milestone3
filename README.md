@@ -1,18 +1,18 @@
 <h1 align="center">Italian Inside</h1>
 <h2 align="center">Bite it - Taste it - Love it</h2>
 
-![intro](./readme/images/responsive.png)
+![intro](./readme/images/intro.png)
 
 The Coronavirus pandemic, kept us all in our houses for more than a year.
 Many people had to find a way to cope with this new reality.
 Someone found a new hobby, others started to study a new language and still others decided to make plans for the future.
 I, honestly, did all of them, but something that many of the people I know did, is cooking; to experiment with new recipes and organize theme dinners with their household.
 
-While [Googleing](https://www.google.com/) new recipes I discovered how difficult it is to find an authentic recipe. Many are just Americanized versions of the genuine one with extra fats and less flavours.
+While [Googleing](https://www.google.com/) new recipes I discovered how difficult it is to find an authentic recipe. Many are just modified versions of the genuine one, with extra fats and less flavours.
 
 A *cuisine* lover like me could not accept this so I decided to make my little part to change this.
 
-I don't know much about other contries but I know a lot about Italy; that is how *Italian Inside* was born.
+I don't know much about other countries but I know a lot about Italy; that is how *Italian Inside* was born.
 
 Italian Inside targets two main groups:
 
@@ -82,25 +82,19 @@ Italian Inside also provides a service to me, the developer, because it advertis
 
 ### Homepage
 
-* As a website owner I want to make it easy for people to consult my website so I will give them the possibility to click on a region in the map to view the recipes of that area.
+* As a website owner I want my website to provide a service but also be fun, that is why I add a map of Italy that, when hovering on it, will reveal the name and the gastronomic specialties of every region.
 
-* As a user, if I want to view the recipes of a specific region I can just click on it.
+* As a user, I would like to know more about italy, like some fun facts.
 
 * As a website owner I want people to easily navigate, that’s why I will provide on every page a navigation bar and a footer with all the links to the pages.
 
 * As a user I want to be able to easily access all pages of the website.
 
-### Regions
-
-* As a website owner I will display my recipes divided by regions so the users will know where that dish belongs to.
-
-* As a user I want to see where a recipe was created so that I can also learn something about Italy.
-
 ### All Recipes
 
-* As a website owner, in this page I will divide all recipes by type to adapt to the different needs and desires of the users.
+* As a website owner, I want to be clear from the beginning the typology of recipes that are on the website. That is why for example, the recipes will have a different background per type and an icon (with tooltip) will inform the uder if the dish is vegetrian or not.
 
-* As a user, if for example I am looking for a dessert, I want to go on the “All recipes” page and find the “Dessert” section.
+* As a user, if for example I am looking for a dessert, I want to go on the “All recipes” page and find the “Dessert” type recipes.
 
 * As a website owner, I want the users to be able to find recipes easily; that is why I will add a search bar.
 
@@ -136,7 +130,7 @@ Italian Inside also provides a service to me, the developer, because it advertis
 
 The entire website uses red as the main color. This is been chosen because red is often associated by the mind to food, as for example green to nature.
 By browing the website is easily noticible that more shades of red have been used.
-The red scheme is being balanced by the use of black (for the text) and white (for the text and the background).
+The red scheme is being balanced by the use of black and white (for the text).
 
 ![red](./readme/images/red.png) 
 
@@ -159,15 +153,14 @@ The icons used in this website are all taken from [Font Awesome](https://fontawe
 ### Images
 
 The images used are taken from different sources:
-* The categories in the "All recipes" pages and some of the recipes pictures, are taken from [Pexels.com](https://www.pexels.com/), that provides images without copyright.
-* The ones used for the regions pages are from [Pixabay](https://pixabay.com/it/).
+* The categories in the "All recipes" pages, the background and the recipes pictures, are taken from [Pexels.com](https://www.pexels.com/), that provides images without copyright.
 * The shortcut icon representing a slice of pizza is been taken from [Favicon.io](https://favicon.io/).
 * The picture with the logo of ["Casale del Giglio"](https://www.casaledelgiglio.it/en/) is been taken from their website.
-* The pictures used for the recipes, some have been taken by me and some have been sent to me by a friend that is a chef and took them personally.
 
 ### Graphic Elements
 
 The code for the interactive map used on the homepage is been realized by [Antonio Del Cin](https://codepen.io/Antoniox22/pen/oYRowJ) and then customized by me.
+The code to add tooltips to the map is been written by [Naila Ahmad](https://codepen.io/nailaahmad/pen/bEBaxo).
 
 ### Defensive Design
 
@@ -188,9 +181,11 @@ All fields are required.
 
 * When trying to delete a recipe (by clicking on the button with the bin icon in the Profile page), the user will trigger a modal that will ask the user again if he/she really wants to delete that recipe.
 
+* There is a defensive 404 error page that will block anyone trying to access a page that require authentification, when they are not authentified.
+
 ### Navigation
 
-Is really important for the website to be user friendly and to help them access the page they are looking for within between maximum 5 clicks.
+Is really important for the website to be user friendly and to help users access the page they are looking for within maximum 5 clicks.
 Below you can find the sitemap of Italian Inside.
 
 <img src="readme/images/site-map.png" alt="sitemap" width="500px">
@@ -199,7 +194,7 @@ Below you can find the sitemap of Italian Inside.
 
 For this project I decided to use Mongo DB as database. Below you can find the structure of my six collections:
 
-<img src="readme/images/database.png" alt="database" width="500px">
+<img src="readme/images/db.png" alt="database" width="500px">
 
 ## Wireframes
 
@@ -218,7 +213,7 @@ My wireframes have been created with [Balsamiq](https://balsamiq.com/). Click on
 From the navigation, the user can access to all main pages.
 Moreover, the logo is also a link to the homepage.
 
-In the mobile view, the menu can be accessed by clicking on hamburger icon on the top right corner that acts as a hamburger button.
+In the mobile view, the menu can be accessed by clicking on hamburger icon on the top right corner that acts as a hamburger menu button.
 The menu will then scroll out from the right side.
 
 * Footer
@@ -228,11 +223,7 @@ It also includes the links to [Facebook](https://www.facebook.com/), [Instagram]
 
 * Homepage
 
-The homepage includes an introduction to the website and an interactive map. By clicking on a region, the page of the selected region will open.
-
-* Region
-
-The region page includes an image of the region, a little list with the most famous products of the region and a list with the recipe of that region.
+The homepage includes an introduction to the website and an interactive map. By hovering on the map, every region will open a tooltip saying the name of that region and the products it is famous for.
 
 * All recipes
 
@@ -242,7 +233,7 @@ Next to each recipe there will be an icon showing if that recipe contains meat, 
 
 * Recipe
 
-The recipe view displays the title with a picture an a few information about the recipe, like servings, difficulty level and ingredients.
+The recipe view displays the title with a picture and a few information about the recipe, like servings, difficulty level and ingredients.
 Underneath the preparation of the recipe is displayed step by step.
 
 * Casale del Giglio
@@ -270,11 +261,12 @@ A flash message will appear if the username or password are incorrect.
 
 In the future I would like to add to Italian Inside:
 - The possibility for users to upload their picture of the recipe once they prepared it at home.
-- The possibility for users to comment under the recipes and add their opinions or advices for other users
+- The possibility for users to comment under the recipes and add their opinions or advices for other users.
 - The user will recive an email after they register with a welcoming message and their log in credentials.
 - Add videos of the preparation of the recipes
+- To give the possibility to the user to create a "favorites" list
 - Create real pages on social medias and advertise the website by teaching a few words in italian or sharing fun facts.
-- Add a map that shows from in the world are people using Italian Inside in order to show from where people are preparing and sharing their italian recipes.
+- Add a map that shows from where in the world are people using Italian Inside in order to show from where people are preparing and sharing their italian recipes.
 
 # Technologies Used
 
@@ -300,6 +292,7 @@ In the future I would like to add to Italian Inside:
 * [W3C Markup Validation Service](https://validator.w3.org/) - Used to identify errors in the HTML code.
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to identify errors in the CSS code.
 * [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to verify performance.
+* [qTip](https://github.com/qTip2/qTip2) - Used to add tooltips to the map
 
 # Testing
 
@@ -341,6 +334,9 @@ In the future I would like to add to Italian Inside:
 5. The way I decided to use is via GitHub. To select this method click on "connect to GitHub" and select the right repository. Click on connect.
 6. Before selecting "Enable Automatic Deploys" go to the setting!
 7. The environment variables are hidden so we will have to write them manually. Do do this, from settings click on "Reveal config vars" and insert your variables.
+
+<img src="readme/images/values.png" alt="How to Deploy - Values" width="500px">
+
 8. Go back to the terminal in GitPod and push both the requirements.txt and the Procfile one at the time, with their respective commits.
 9. We can now go back to Heroku and click on "Enable Automatic Deployment". Next click on "Deploy Branch".
 
@@ -364,15 +360,12 @@ The logo of Italian Inside is been created by me on [Canva](https://www.canva.co
 
 The shortcut icon is been taken from [Favicon.io](https://favicon.io/).
 
-The pictures of the categories have been found on [Pexels.com](https://www.pexels.com/).
-
-The pictures used for the regions are from [Pixabay](https://pixabay.com/it/).
-
-The pictures of the recipes, some are mine, of dishes that I made. Some have been taken from Pexels. Some others have been supplied by my friend [Giacomo](https://www.instagram.com/ziojack93/).
+The pictures of the categories, recipes and the background have been found on [Pexels.com](https://www.pexels.com/).
 
 ## Code
 
 The graphic element of the map of Italy is been created by [Antonio Dal Cin](https://codepen.io/Antoniox22/pen/oYRowJ).
+The map tooltips code is been created by [Naila Ahmad](https://codepen.io/nailaahmad/pen/bEBaxo).
 
 Some code snippets like the regEx pattern have been taken from [StackOverflow](https://stackoverflow.com/).
 
@@ -385,8 +378,6 @@ I want to thank you some people that made the difference and helped me in comple
 First of all to my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for supporting me in this project and giving me great advices.
 
 To [Code Institute](https://codeinstitute.net/) for all the things they taught me.
-
-To my friend [Giacomo](https://www.instagram.com/ziojack93/) for realizing some dishes in the last week before my submission so I can have the pictures.
 
 To my parents, [Monica and Gabriel Lupu](https://www.facebook.com/lupu.emonica) that never stop sustaining me.
 
