@@ -52,7 +52,7 @@ In order to test the responsiveness, is been used [Chrome DevTools]() and [Respo
 
 **Notes**
 
-In 4 pages, the logo and shortcut icon doesn't display.
+In 4 pages, the logo and shortcut icon doesn't display (both on the navigation bar and the side menu).
 
 # Browsers Compatibility
 
@@ -151,4 +151,4 @@ At the end I decided to write the text by hand but I left the database regions.f
 
 * I also had a bug with the search bar that didn't work properly. I discovered that problem was that my recipes underneat were divided into more collections with header for every category. I solved this by getting rid of the category names and displaying them just as a background for the recipes.
 
-* The last bug is that logo and shortcut icon do not display in the following pages: Recipe View, Profile, Edit Recipe and 404 handlers. I could not find an explaination for this. Can be dependent on the python code made to retrieve the database information.
+* The last bug is that logo and shortcut icon do not display in the following pages: Recipe View, Profile, Edit Recipe and 404 handlers (in small devices the logo also disappeared in the side menu). I could not find an explaination for this. Can be dependent on the python code made to retrieve the database information.
