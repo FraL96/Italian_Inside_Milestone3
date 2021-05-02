@@ -69,7 +69,8 @@
                 <p>
                     {% for option in options %}
                     <label>
-                        <input name="option" id="option" value="{{ option.option_name }}" type="radio" />
+                        <input class="black-text" name="option" id="option" value="{{ option.option_name }}"
+                            type="radio" />
                         <span>{{ option.option_name }}
                             {% if option.option_name == "Contains meat" %}
                             <i class="fas fa-drumstick-bite red-text text-darken-1"></i>

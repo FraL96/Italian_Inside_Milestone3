@@ -79,9 +79,11 @@
 
                     <label>
                         {% if option.option_name == recipe.option %}
-                        <input name="option" id="option" value="{{ recipe.option }}" type="radio" checked />
+                        <input class="black-text" name="option" id="option" value="{{ recipe.option }}" type="radio"
+                            checked />
                         {% else %}
-                        <input name="option" id="option" value="{{ option.option_name }}" type="radio" />
+                        <input class="black-text" name="option" id="option" value="{{ option.option_name }}"
+                            type="radio" />
                         {% endif %}
                         <span>{{ option.option_name }}
                             {% if option.option_name == "Contains meat" %}
