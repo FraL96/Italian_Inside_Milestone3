@@ -153,7 +153,7 @@ The icons used in this website are all taken from [Font Awesome](https://fontawe
 ### Images
 
 The images used are taken from different sources:
-* The categories in the "All recipes" pages, the background and the recipes pictures, are taken from [Pexels.com](https://www.pexels.com/), that provides images without copyright.
+* The categories in the "All recipes" pages, the background and the recipes pictures, are taken from [Pexels.com](https://www.pexels.com/) and [Pixabay](https://pixabay.com/it/), that provides images without copyright.
 * The shortcut icon representing a slice of pizza is been taken from [Favicon.io](https://favicon.io/).
 * The picture with the logo of ["Casale del Giglio"](https://www.casaledelgiglio.it/en/) is been taken from their website.
 
@@ -382,7 +382,7 @@ The logo of Italian Inside is been created by me on [Canva](https://www.canva.co
 
 The shortcut icon is been taken from [Favicon.io](https://favicon.io/).
 
-The pictures of the categories, recipes and the background have been found on [Pexels.com](https://www.pexels.com/).
+The pictures of the categories, recipes and the background have been found on [Pexels.com](https://www.pexels.com/) and [Pixabay](https://pixabay.com/it/).
 
 ## Code
 
