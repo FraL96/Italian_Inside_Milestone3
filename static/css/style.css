@@ -9,13 +9,6 @@ h4 {
     font-style: italic;
 }
 
-.btn,
-.btn-large,
-.btn-small {
-    position: relative;
-    z-index: 2;
-}
-
 h5 {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 300;
@@ -29,6 +22,14 @@ p {
     font-family: 'Roboto', sans-serif;
     font-size: medium;
     font-style: italic;
+}
+
+label {
+    color: black;
+}
+
+.card-panel {
+    background-color: rgba(255, 255, 255, 0.747);
 }
 
 .text-shadow {
