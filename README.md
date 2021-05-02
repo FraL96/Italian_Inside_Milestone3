@@ -316,6 +316,8 @@ In the future I would like to add to Italian Inside:
 
 # Testing
 
+Click [here](./TESTING.md) to go to Testing.
+
 # Deployment
 
 **How to clone this project:**
