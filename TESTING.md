@@ -15,33 +15,40 @@ This file is the forth chapter of the full README file. Click here to go to [REA
 
 ### [W3C HTML Validator]():
 
-In all the files, everytime [Jinja]() was used, it was reported as an error.
-![Jinja errors]()
+In all the files, everytime [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) was used, it was reported as an error.
+
+<img src="readme/images/jinja-errors.png" alt="Jinja errors" width="500px">
+
 Also, in the index file, an attribute of the map that connected to the tooltip was considered wrong.
-![map-errors]()
+
+<img src="readme/images/map-error.png" alt="Map error" width="500px">
+
 Apart this, small problems have been found, like a missing closing tag and a typo in an attribute, those were immediately corrected.
 
-### [W3C CSS Validator]():
+### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/):
 
 In the CSS file, no errors have been found.
-![foto]()
 
-### JS Hint 
+<img src="readme/images/css-validation.png" alt="CSS validation" width="500px">
 
-[Js Hint]() revealed 2 warnings and 1 undefined variable in script.js.
-![]()
+### [JS Hint](https://jshint.com/)
 
-## PEP8
+JS Hint revealed 2 warnings and 1 undefined variable in script.js.
 
-The [PEP8]() validator revealed no errors.
-![]()
+<img src="readme/images/jshint.png" alt="JS Hint" width="500px">
+
+## [PEP8](http://pep8online.com/)
+
+The PEP8 validator revealed no errors.
+
+<img src="readme/images/pep8.png" alt="PEP8" width="500px">
 
 # Responsiveness
 
 Below you can find the list of the devices where the website is been tested.
 In order to test the responsiveness, is been used [Chrome DevTools]() and [Responsive Design Checker]().
 
-![table]()
+![Responsiveness](./readme/images/responsiveness-table.png)
 
 **Notes**
 
@@ -52,7 +59,7 @@ In 4 pages, the logo and shortcut icon doesn't display.
 This website is been used on 5 different browser manually.
 Here below you can find the table with the results.
 
-![]()
+![Compatibility](./readme/images/browser-compatibility.png)
 
 # Testing User Stories
 
