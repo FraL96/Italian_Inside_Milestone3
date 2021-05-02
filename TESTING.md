@@ -1,6 +1,6 @@
-<h1 align="center">Italian Inside</h1>
+<h1 align="center">4. Testing</h1>
 
-This file is the forth chapter of the full README file. Click here to go to [README.md](#Italian-Inside)
+This file is the forth chapter of the full README file. Click here to go to [README.md](./README.md)
 
 # Table of contents
 
