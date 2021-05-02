@@ -29,12 +29,11 @@ p {
 }
 
 body {
-    background: url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.233)), to(rgba(255, 255, 255, 0.13))), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
 }
 
 .instructions {
@@ -201,6 +200,7 @@ nav ul a {
     -webkit-box-shadow: none;
     box-shadow: none;
     padding: 0;
+    z-index: 0;
 }
 
 .qtip-content {
@@ -209,6 +209,7 @@ nav ul a {
     overflow: hidden;
     text-align: center;
     word-wrap: break-word;
+    z-index: 0;
 }
 
 .qtip-default {
@@ -229,6 +230,7 @@ nav ul a {
     position: absolute;
     background: transparent;
     border: 0 dashed transparent;
+    z-index: 0;
 }
 
 .italia {
@@ -236,7 +238,9 @@ nav ul a {
     width: inherit;
     text-align: center;
     margin-top: 30px;
+    z-index: 0;
     position: relative;
+
 }
 
 /*-- all recipes --*/
@@ -304,6 +308,10 @@ nav ul a {
 }
 
 /*-- profile --*/
+
+.blur {
+    background-color: #ffffff86;
+}
 
 .edit-delete {
     font-size: 20px;
