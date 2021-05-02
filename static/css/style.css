@@ -29,13 +29,12 @@ p {
 }
 
 body {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.158)), to(rgba(255, 255, 255, 0.13))), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background: -o-linear-gradient(rgba(255, 255, 255, 0.158), rgba(255, 255, 255, 0.13)), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background: linear-gradient(rgba(255, 255, 255, 0.158), rgba(255, 255, 255, 0.13)), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background: url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    height: 700px;
-    width: auto;
+}
 }
 
 .instructions {
