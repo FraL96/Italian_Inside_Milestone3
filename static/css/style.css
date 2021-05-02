@@ -29,6 +29,8 @@ p {
 }
 
 body {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.158)), to(rgba(255, 255, 255, 0.13))), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.158), rgba(255, 255, 255, 0.13)), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background: linear-gradient(rgba(255, 255, 255, 0.158), rgba(255, 255, 255, 0.13)), url(https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-size: cover;
     background-repeat: no-repeat;
@@ -197,6 +199,7 @@ nav ul a {
     font-size: 14px;
     line-height: 17px;
     direction: ltr;
+    -webkit-box-shadow: none;
     box-shadow: none;
     padding: 0;
 }
@@ -217,8 +220,6 @@ nav ul a {
     border-color: #5C0201;
     background-color: #ffffff;
     color: #5C0201;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
     border-radius: 0px;
     padding: 5px;
 }
@@ -266,23 +267,33 @@ nav ul a {
 }
 
 .pasta {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.322)), to(rgba(255, 255, 255, 0.226))), url("https://images.pexels.com/photos/6103858/pexels-photo-6103858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/6103858/pexels-photo-6103858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/6103858/pexels-photo-6103858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .meat {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.322)), to(rgba(255, 255, 255, 0.226))), url("https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-position: center;
 }
 
 .fish {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.322)), to(rgba(255, 255, 255, 0.226))), url("https://images.pexels.com/photos/2042591/pexels-photo-2042591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/2042591/pexels-photo-2042591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/2042591/pexels-photo-2042591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .pizza {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.322)), to(rgba(255, 255, 255, 0.226))), url("https://images.pexels.com/photos/4109083/pexels-photo-4109083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/4109083/pexels-photo-4109083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://images.pexels.com/photos/4109083/pexels-photo-4109083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .desserts {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.322)), to(rgba(255, 255, 255, 0.226))), url("https://cdn.pixabay.com/photo/2020/01/05/07/15/colorful-4742428_1280.jpg");
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://cdn.pixabay.com/photo/2020/01/05/07/15/colorful-4742428_1280.jpg");
     background: linear-gradient(rgba(255, 255, 255, 0.322), rgba(255, 255, 255, 0.226)), url("https://cdn.pixabay.com/photo/2020/01/05/07/15/colorful-4742428_1280.jpg");
     background-position: center;
 }

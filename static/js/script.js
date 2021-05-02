@@ -55,7 +55,7 @@ $(document).ready(function () {
     //tooltips - Italy map
     var tooltipsmall = ['#Valle-d-Aosta', '#Molise', '#Liguria', '#Piemonte', '#Lombardia', '#Trentino-Alto-Adige', '#Veneto',
         '#Umbria', '#Lazio', '#Sicilia', '#Sardegna', '#Calabria', '#Campania', '#Basilicata', '#Toscana', '#Abruzzo', '#Friuli-Venezia-Giulia', '#Marche', '#Emilia-Romagna', '#Puglia'
-    ]
+    ];
 
     $(tooltipsmall).qtip({
         content: function () {
@@ -71,7 +71,6 @@ $(document).ready(function () {
         style: {
             tip: {
                 corner: true,
-                corner: 'bottom center',
                 border: 1,
                 width: 15,
                 height: 7
