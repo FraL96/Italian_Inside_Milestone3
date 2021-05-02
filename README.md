@@ -171,7 +171,7 @@ Moreover it has to be unique.
 The password instead, have to be between 5 and 20 characters and contain at least a digit, a special character, a lower case and an upper case letter.
 
 * The form in the add and edit pages also include specific patterns in their fields:
-The name of the recipe has to be between 3 and 200 characters, only letters and numbers.
+The name of the recipe has to be between 3 and 200 characters.
 The URL to include a picture has to start with "http://" or "https://" and be between 6 and 900 characters.
 The number of servings input has to be maximum 2 characters long and include just numbers.
 The name of the wine to pair with the dish has to be between 5 and 50 characters.
