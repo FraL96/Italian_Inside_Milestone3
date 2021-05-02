@@ -216,14 +216,20 @@ Moreover, the logo is also a link to the homepage.
 In the mobile view, the menu can be accessed by clicking on hamburger icon on the top right corner that acts as a hamburger menu button.
 The menu will then scroll out from the right side.
 
+<img src="readme/images/navbar.png" alt="Navbar" width="500px">
+
 * Footer
 
 The footer includes an invitation to join the website and to contact us for any kind of communication. The email address inclued a link so by clicking it, it will open a new email with the "To:" already filled in.
 It also includes the links to [Facebook](https://www.facebook.com/), [Instagram](https://www.instagram.com/) and [YouTube](https://www.youtube.com/).
 
+<img src="readme/images/footer.png" alt="Footer" width="500px">
+
 * Homepage
 
 The homepage includes an introduction to the website and an interactive map. By hovering on the map, every region will open a tooltip saying the name of that region and the products it is famous for.
+
+<img src="readme/images/home.png" alt="Homepage" width="500px">
 
 * All recipes
 
@@ -231,24 +237,34 @@ This section contains a search bar to allow the user to search for a recipe by j
 It also contains a list of all the recipes divided by category.
 Next to each recipe there will be an icon showing if that recipe contains meat, fish or if is vegetarian.
 
+<img src="readme/images/all-recipes.png" alt="All recipes" width="500px">
+
 * Recipe
 
 The recipe view displays the title with a picture and a few information about the recipe, like servings, difficulty level and ingredients.
 Underneath the preparation of the recipe is displayed step by step.
 
+<img src="readme/images/recipe-view.png" alt="Recipe View" width="500px">
+
 * Casale del Giglio
 
 In this page, there is a little explaination about the wine company. Moreover there is also a button linked to the website of the company.
+
+<img src="readme/images/wine.png" alt="Casale del Giglio" width="500px">
 
 * Profile
 
 This page is accessible only after having registered or logged in. In this section the user will be able to add new recipes by clicking on the button.
 He/she will also be able to review the added recipes, edit or delete them.
 
+<img src="readme/images/profile.png" alt="Profile" width="500px">
+
 * Add/Edit recipe
 
 In the add page, a logged in user will have the possibility to fill up the form and add a new recipe to the website.
 The edit form will be really similar but the fields will already contain the information of the recipe that the user would like to modify. Once modified, the user will have the possibility to save the changes or cancel them and go back to the previous version of the recipe.
+
+<img src="readme/images/add-rec.png" alt="Add recipe" width="500px">
 
 * Log In / Registration
 
@@ -256,6 +272,10 @@ In the registration page, the user will be able to create a username and a passw
 A flash message will show up if the user is already existent.
 In the log in page, the registered user will be able to log in by filling up his/her username and password.
 A flash message will appear if the username or password are incorrect.
+
+<img src="readme/images/login.png" alt="Login" width="500px">
+
+<img src="readme/images/register.png" alt="Register" width="500px">
 
 ## Future Features
 
