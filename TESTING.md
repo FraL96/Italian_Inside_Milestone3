@@ -138,6 +138,8 @@ The admin has also a powerful login credential that allows her to view all the r
 The users will have to respect the defensive design added to input fields, text areas and dropdown options. If they will not, the website will not allow them to go ahead with the desired action like edit a recipe or logging in.
 Moreover, the 404 error handler makes sure that, if a user try to access a private area of the page without loggin in before, a message will inform them that the page was not found and will give them the possibility to click on a button to go back to the homepage.
 
+<img src="readme/images/404.png" alt="404 handler" width="500px">
+
 # Bugs
 
 Being this my first full stack project, I encountered some bugs. Some I managed to solve but some not.
