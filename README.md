@@ -30,7 +30,6 @@ Click [here](https://italian-inside-cookbook.herokuapp.com/) to have a look at I
     - [User Stories](#User-Stories)
         - [Website](#Website)
         - [Homepage](#Homepage)
-        - [Regions](#Regions)
         - [All Recipes](#All-Recipes)
         - [Recipe View](#Recipe-View)
         - [Wine Company](#Wine-Company)
@@ -129,7 +128,7 @@ Italian Inside also provides a service to me, the developer, because it advertis
 ### Color Use
 
 The entire website uses red as the main color. This is been chosen because red is often associated by the mind to food, as for example green to nature.
-By browing the website is easily noticible that more shades of red have been used.
+By browsing the website is easily noticible that more shades of red have been used.
 The red scheme is being balanced by the use of black and white (for the text).
 
 ![red](./readme/images/red.png) 
@@ -153,7 +152,7 @@ The icons used in this website are all taken from [Font Awesome](https://fontawe
 ### Images
 
 The images used are taken from different sources:
-* The categories in the "All recipes" pages, the background and the recipes pictures, are taken from [Pexels.com](https://www.pexels.com/) and [Pixabay](https://pixabay.com/it/), that provides images without copyright.
+* The categories in the "All recipes" pages, the background and the recipes pictures, are taken from [Pexels.com](https://www.pexels.com/) and [Pixabay](https://pixabay.com/it/), that provide images without copyright.
 * The shortcut icon representing a slice of pizza is been taken from [Favicon.io](https://favicon.io/).
 * The picture with the logo of ["Casale del Giglio"](https://www.casaledelgiglio.it/en/) is been taken from their website.
 
@@ -166,9 +165,9 @@ The code to add tooltips to the map is been written by [Naila Ahmad](https://cod
 
 In order to avoid the misuse of the website and its forms, some defensive mechanisms have been used:
 * The login and register pages have a custom pattern applied to the username and the password field.
-The username have to be between 3 and 20 characters and contain lowercase, uppercase or numbers.
+The username have to be between 3 and 20 characters and contain lowercase letters, uppercase letters or numbers.
 Moreover it has to be unique.
-The password instead, have to be between 5 and 20 characters and contain at least a digit, a special character, a lower case and an upper case letter.
+The password instead, have to be between 5 and 20 characters and contain at least a digit, a special character, a lowercase and an uppercase letter.
 
 * The form in the add and edit pages also include specific patterns in their fields:
 The name of the recipe has to be between 3 and 200 characters.
@@ -213,10 +212,12 @@ My wireframes have been created with [Balsamiq](https://balsamiq.com/). Click on
 From the navigation, the user can access to all main pages.
 Moreover, the logo is also a link to the homepage.
 
-In the mobile view, the menu can be accessed by clicking on hamburger icon on the top right corner that acts as a hamburger menu button.
+In the mobile view, the menu can be accessed by clicking on the hamburger icon on the top right corner that acts as a hamburger menu button.
 The menu will then scroll out from the right side.
 
 <img src="readme/images/navbar.png" alt="Navbar" width="500px">
+<img src="readme/images/hamburger-menu.png" alt="Hamburger menu" width="500px">
+<img src="readme/images/side-menu.png" alt="Side bar" width="500px">
 
 * Footer
 
@@ -264,7 +265,7 @@ He/she will also be able to review the added recipes, edit or delete them.
 In the add page, a logged in user will have the possibility to fill up the form and add a new recipe to the website.
 The edit form will be really similar but the fields will already contain the information of the recipe that the user would like to modify. Once modified, the user will have the possibility to save the changes or cancel them and go back to the previous version of the recipe.
 
-<img src="readme/images/add-rec.png" alt="Add recipe" width="500px">
+<img src="readme/images/add.png" alt="Add recipe" width="500px">
 
 * Log In / Registration
 
@@ -273,9 +274,9 @@ A flash message will show up if the user is already existent.
 In the log in page, the registered user will be able to log in by filling up his/her username and password.
 A flash message will appear if the username or password are incorrect.
 
-<img src="readme/images/login.png" alt="Login" width="500px">
+<img src="readme/images/login-form.png" alt="Login" width="500px">
 
-<img src="readme/images/register.png" alt="Register" width="500px">
+<img src="readme/images/register-form.png" alt="Register" width="500px">
 
 ## Future Features
 
