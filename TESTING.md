@@ -47,6 +47,7 @@ The PEP8 validator revealed no errors.
 
 Below you can find the list of the devices where the website is been tested.
 In order to test the responsiveness, is been used [Chrome DevTools]() and [Responsive Design Checker]().
+This table is been realized with [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel).
 
 ![Responsiveness](./readme/images/responsiveness-table.png)
 
@@ -58,6 +59,7 @@ In 4 pages, the logo and shortcut icon doesn't display (both on the navigation b
 
 This website is been used on 5 different browser manually.
 Here below you can find the table with the results.
+This table is been realized with [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel).
 
 ![Compatibility](./readme/images/browser-compatibility.png)
 
@@ -146,11 +148,13 @@ Being this my first full stack project, I encountered some bugs. Some I managed 
 Here is a list:
 
 * On the homepage I wanted to display an interactive map of Italy. However, it was my first time working with a graphic element. I converted it to more different formats to see what was the best one for my scope. At the end I decided to leave in svg.
-Also applying the tootips got me a lot of time. The map at the moment is working properly and the tooltips are displaying correctly. The only bug still existent is the fact that the tooltips influence the z-index of the map. So, if the user hover on the map, it will display on top of the navbar till the user will click back on another area of the same page. I whope I will solve this bug in future.
+Also applying the tootips got me a lot of time. The map at the moment is working properly and the tooltips are displaying correctly. The only bug still existent is the fact that the tooltips influence the z-index of the map. So, if the user hover on the map, it will display on top of the navbar till the user will click back on another area of the same page. I hope I will solve this bug in future.
 
 * Another bug I found in the map is that I could not use jinja to retrieve the database information to write in its tooltips. I tried to change the code more time but it continue to change that map itself. Sometime the map was showing upside down, other times it was displayed 20 times, one time for every region.
 At the end I decided to write the text by hand but I left the database regions.famous_for in, so maybe in the future I will be able to find a solution to this.
 
-* I also had a bug with the search bar that didn't work properly. I discovered that problem was that my recipes underneat were divided into more collections with header for every category. I solved this by getting rid of the category names and displaying them just as a background for the recipes.
+* I also had a bug with the search bar that didn't work properly. I discovered that problem was that my recipes underneath were divided into more collections with header for every category. I solved this by getting rid of the category names and displaying them just as a background for the recipes.
 
 * The last bug is that logo and shortcut icon do not display in the following pages: Recipe View, Profile, Edit Recipe and 404 handlers (in small devices the logo also disappeared in the side menu). I could not find an explaination for this. Can be dependent on the python code made to retrieve the database information.
+
+[Go back to the top](#Table-of-contents)

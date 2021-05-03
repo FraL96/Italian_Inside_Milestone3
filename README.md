@@ -5,7 +5,7 @@
 
 The Coronavirus pandemic, kept us all in our houses for more than a year.
 Many people had to find a way to cope with this new reality.
-Someone found a new hobby, others started to study a new language and still others decided to make plans for the future.
+Some found a new hobby, others started to study a new language and some others decided to make plans for the future.
 I, honestly, did all of them, but something that many of the people I know did, is cooking; to experiment with new recipes and organize theme dinners with their household.
 
 While [Googleing](https://www.google.com/) new recipes I discovered how difficult it is to find an authentic recipe. Many are just modified versions of the genuine one, with extra fats and less flavours.
@@ -91,7 +91,7 @@ Italian Inside also provides a service to me, the developer, because it advertis
 
 ### All Recipes
 
-* As a website owner, I want to be clear from the beginning the typology of recipes that are on the website. That is why for example, the recipes will have a different background per type and an icon (with tooltip) will inform the uder if the dish is vegetrian or not.
+* As a website owner, I want to be clear from the beginning the typology of recipes that are on the website. That is why for example, the recipes will have a different background per type and an icon (with tooltip) will inform the user if the dish is vegetrian or not.
 
 * As a user, if for example I am looking for a dessert, I want to go on the “All recipes” page and find the “Dessert” type recipes.
 
@@ -375,7 +375,7 @@ The website is created by me. Some features like the user authentification are i
 
 The recipes are from [Giallo Zafferano](https://www.giallozafferano.com/) and where adapted for Italian Inside.
 
-I chose the wine company, [Casale del Giglio](https://www.casaledelgiglio.it/en/), to be sponsored on the website because one of my high school professors works in that company and I often seen and heard about their wines.
+I chose the wine company, [Casale del Giglio](https://www.casaledelgiglio.it/en/), to be sponsored on the website because one of my high school professors works in that company and I often see and hear about their wines.
 
 ## Media
 
